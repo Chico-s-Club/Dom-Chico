@@ -1,0 +1,152 @@
+/*
+    20px = 1,25rem
+    24px = 1,5rem
+    40px = 2,5rem
+    64px = 4rem
+*/
+
+:root{
+    --Branco: #fff;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+    --Hover: 0.15s;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('CenturyGothicPaneuropeanRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Fundo);
+    color: var(--Preto);
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 16px;
+}
+
+svg {
+    color: var(--Branco);
+}
+
+.navbar{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--Laranja);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.nav-item{
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+}
+
+.link-text{
+    display: none;
+    font-size: 1.25rem;
+    color: var(--Branco);
+}
+
+.nav-activate{
+    display: none;
+}
+
+main{
+    margin-left: 464px; /* 384px + 5rem da navbar */
+    margin-right: 384px;
+}
+
+/* MEDIA QUERIES */
+
+
+/* TELAS PEQUENAS */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        top: 0;
+        width: 100vw;
+        height: 4rem;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .nav-item{
+        padding: 0;
+        max-width: 2rem;
+    }
+
+    .nav-link{
+        height: 100%;
+    }
+
+    .nav-activate{
+        display: block;
+        width: 2rem;
+    }
+}
+
+/* TELAS GRANDES */
+@media only screen and (min-width: 601px) {
+    .nav-link svg{
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
+
+    .navbar:hover{
+        width: 16rem;
+    }
+    
+    .navbar:hover .link-text{
+        display: block;
+    }
+    
+    .nav-item:hover{
+        background-color: var(--Branco);
+    }
+    
+    .nav-item:hover svg{
+        color: var(--Preto);
+    }
+    
+    .nav-item:hover .link-text{
+        color: var(--Preto);
+    }
+
+}
