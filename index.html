@@ -15,7 +15,7 @@
 <body>
     
     <!-- Início da NavBar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
 
         <ul class="navbar-nav">
 
@@ -84,12 +84,13 @@
                 </a>
             </li>
 
-            <li class="nav-item nav-activate">
-                <a href="#" class="nav--link"></a>
+            <li class="toggle-nav nav-item" id="toggle-nav">
+                <a href="#" class="nav-link" id="toggleBtn" onclick="toggleNavbar()">
 
-                <svg width="21" height="36" viewBox="0 0 21 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.822836 3.54664L3.77518 0.719975L19.8559 16.1253C20.1151 16.3722 20.3208 16.6657 20.4612 16.989C20.6016 17.3124 20.6738 17.6591 20.6738 18.0093C20.6738 18.3595 20.6016 18.7063 20.4612 19.0296C20.3208 19.3529 20.1151 19.6465 19.8559 19.8933L3.77518 35.3066L0.825618 32.48L15.9185 18.0133L0.822836 3.54664Z" fill="white"/>
-                </svg>   
+                    <svg width="18" height="33" viewBox="0 0 21 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow" id="icon-arrow">
+                        <path d="M0.822836 3.54664L3.77518 0.719975L19.8559 16.1253C20.1151 16.3722 20.3208 16.6657 20.4612 16.989C20.6016 17.3124 20.6738 17.6591 20.6738 18.0093C20.6738 18.3595 20.6016 18.7063 20.4612 19.0296C20.3208 19.3529 20.1151 19.6465 19.8559 19.8933L3.77518 35.3066L0.825618 32.48L15.9185 18.0133L0.822836 3.54664Z" fill=""/>
+                    </svg>
+                </a>
             </li>
 
         </ul>
@@ -106,6 +107,7 @@
     <!-- Fim da main -->
 
 
+    <script src="src/js/universal.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
