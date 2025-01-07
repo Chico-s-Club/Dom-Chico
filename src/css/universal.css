@@ -1,0 +1,260 @@
+/*
+    20px = 1,25rem
+    24px = 1,5rem
+    40px = 2,5rem
+    64px = 4rem
+*/
+
+:root{
+    --Branco: #fff;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+    --Hover: 0.15s;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('CenturyGothicPaneuropeanRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Fundo);
+    color: var(--Preto);
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 16px;
+}
+
+svg {
+    color: var(--Branco);
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--Laranja);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.logo{
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+}
+
+.logo-text{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-item{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+}
+
+.link-text{
+    display: none;
+    font-size: 1.25rem;
+    color: var(--Branco);
+}
+
+.toggle-nav{
+    display: none;
+}
+
+/* UTILITY-BAR */
+
+.utility-wrapper{
+    width: 100%;
+    height: 100px;
+    padding-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
+    padding-right: clamp(8px, 10vw, 384px);
+    background-color: var(--Vinho);
+}
+
+.utility-bar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--Branco);
+}
+
+.promo-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 4px;
+    text-align: center;
+    border-bottom: 1px solid var(--Branco);
+}
+
+.coupon{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+
+/* TELAS PEQUENAS */
+
+@media only screen and (max-width: 900px) {
+    main{
+        margin-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
+        margin-right: clamp(5rem, 10vw, 384px);
+    }
+
+    .navbar{
+        top: 0;
+        left: -90vw;
+        position: fixed;
+        width: 100vw;
+        height: 4rem;
+        padding: 0;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .nav-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        flex-grow: 1;
+        margin-left: auto;
+    }
+
+    .nav-link{
+        height: 100%;
+    }
+
+    .toggle-nav{
+        display: flex;
+        justify-content: center;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+        flex-grow: 1;
+        max-width: 10vw;
+        background-color: var(--Laranja);
+        border-radius: 0 10px 10px 0;
+    }
+
+
+    .icon-arrow{
+        fill: var(--Branco);
+    }
+
+}
+
+@media (max-width: 600px) {
+    main{
+        margin-left: clamp(8px, 5vw, 464px);
+        margin-right: clamp(8px, 5vw, 384px);
+    }
+
+    .promo-bar{
+        justify-content: center;
+    }
+
+    .promo-text, .socials{
+        display: none;
+    }
+
+}
+
+/* TELAS GRANDES */
+
+@media only screen and (min-width: 901px) {
+    main{
+        margin-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
+        margin-right: clamp(8px, 10vw, 384px);
+    }
+
+    .navbar{
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 25%);
+    }
+
+    .nav-link svg{
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
+
+    .navbar:hover{
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text{
+        display: block;
+    }
+    
+    .nav-item:hover{
+        background-color: var(--Branco);
+    }
+    
+    .nav-item:hover svg{
+        color: var(--Preto);
+    }
+    
+    .nav-item:hover .link-text{
+        color: var(--Preto);
+    }
+
+}
