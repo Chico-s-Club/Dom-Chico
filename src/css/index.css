@@ -10,7 +10,7 @@
     384px = 24rem
 */
 
-:root{
+:root {
     --Branco: #fff;
     --BrancoSuave: #f7f7f7;
     --Preto: #000;
@@ -28,7 +28,7 @@
 
 /* SELOS DE APROVAÇÃO */
 
-.approval-container{
+.approval-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,11 +36,11 @@
     margin-bottom: 12rem;
 }
 
-.approval-block{
+.approval-block {
     display: flex;
 }
 
-.approval-item{
+.approval-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,30 +48,30 @@
     flex-basis: 0;
 }
 
-.approval-item{
+.approval-item {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.approval-icon{
+.approval-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 1rem;
 }
 
-.approval-icon svg{
+.approval-icon svg {
     width: 48px;
     height: 48px;
 }
 
-.approval-info{
+.approval-info {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.approval-info h3{
+.approval-info h3 {
     width: 100%;
     font-size: 1rem;
     font-weight: bold;
@@ -79,7 +79,7 @@
 }
 
 /* CARROSSEL DE PRODUTOS */
-.caroussel-container{
+.caroussel-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,8 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 2rem 6%; /*6 ou 8 não decidi*/
+    padding: 2rem 6%;
+    /*6 ou 8 não decidi*/
 }
 
 .testimonials-header {
@@ -159,7 +160,7 @@
 .testimonial-quote {
     font-size: 1rem;
     border-bottom: 1px solid #000;
-    padding-bottom: 0.5rem; 
+    padding-bottom: 0.5rem;
     flex-grow: 1;
 }
 
@@ -210,7 +211,7 @@
 }
 
 .swiper-button-next {
-    right: 1px; 
+    right: 1px;
 }
 
 .swiper-button-prev {
@@ -221,31 +222,34 @@
     background-color: var(--Laranja);
 }
 
+/*FOOTER*/
+
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* TELAS PEQUENAS */
 
 @media (max-width: 900px) {
-    .approval-block{
+    .approval-block {
         flex-direction: column;
     }
 
-    .approval-item{
+    .approval-item {
         flex-direction: column;
         justify-content: space-between;
         border-right: none;
         height: 100%;
     }
 
-    .approval-info h3{
+    .approval-info h3 {
         font-size: 0.875rem;
     }
 
-    .approval-info{
+    .approval-info {
         font-size: 0.875rem;
     }
 
-    .approval-info, .approval-info h3{
+    .approval-info,
+    .approval-info h3 {
         text-align: center;
     }
 
@@ -255,13 +259,13 @@
 }
 
 @media (max-width: 600px) {
-    .approval-icon svg{
+    .approval-icon svg {
         margin-bottom: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .approval-icon svg{
+    .approval-icon svg {
         width: 30px;
         height: 30px;
     }
@@ -270,7 +274,11 @@
 /* TELAS GRANDES */
 
 @media (min-width: 901px) {
-    .testimonials-container, .teste, .approval-container, .caroussel-container{
+
+    .testimonials-container,
+    .teste,
+    .approval-container,
+    .caroussel-container {
         padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
         padding-right: clamp(4px, 10vw, 384px);
     }

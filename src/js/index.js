@@ -75,7 +75,7 @@ const mockData = [
               </div>
               <div class="author-info">
                   <h3>${review.userName}</h3>
-                  <p>${review.yearLoggedIn}</p>
+                  <p>Cliente desde ${review.yearLoggedIn}</p>
               </div>
           </div>
           
