@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - Dom Chico</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="src/scss/main.css">
     <link rel="stylesheet" href="src/css/index.css" type="text/css">
     <link rel="stylesheet" href="src/css/universal.css" type="text/css">
@@ -128,10 +130,38 @@
     <main>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim ratione voluptatibus. Optio ad facilis nostrum id laudantium commodi, laboriosam ipsum a, velit tempora quo sapiente, provident inventore voluptate nulla!
 
+        <div class="testimonials-container">
+            <div class="testimonials" id="testimonials">
+                <div class="testimonials-header" id="testimonials-header">
+                    <h1>Avaliações</h1>
+                    <h2>O que os <span>Clientes Dizem</span></h2>
+                    <p>
+                        Quer saber o que torna a nossa marca tão especial?
+                        Confira o que nossos clientes têm a dizer!
+                    </p>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper" id="reviews-container">
+                        <!-- Slides -->
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- Fim da main -->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/universal.js" defer></script>
+    <script src="src/js/index.js"></script>
 </body>
 </html>
