@@ -225,7 +225,7 @@ svg {
 }
 
 .footer-section h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .footer-section ul {
@@ -235,7 +235,6 @@ svg {
 
 .footer-section ul li {
     font-size: 1rem;
-    margin: 5px 0;
 }
 
 .footer-section ul li a {
@@ -244,7 +243,7 @@ svg {
 }
 
 .footer-section ul li a i {
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .flag-image {
@@ -254,8 +253,8 @@ svg {
 
 .footer-bottom {
     border-top: 1px solid var(--BrancoSuave);
-    margin-top: 20px;
-    padding-top: 10px;
+    margin-top: 2rem;
+    padding-top: 0.8rem;
     text-align: center;
 }
 

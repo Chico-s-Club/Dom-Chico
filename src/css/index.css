@@ -99,8 +99,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 2rem 6%;
-    /*6 ou 8 não decidi*/
+    padding: 2rem 6%; /*6 ou 8 não decidi*/
 }
 
 .testimonials-header {
@@ -143,7 +142,7 @@
 .user-icon {
     width: 40px;
     height: 40px;
-    background-image: url('images/user.svg');
+    background-image: url(); /*ARRUMA AQUI PRA MIM MATEUS*/
     background-size: cover;
     border-radius: 100%;
 }
