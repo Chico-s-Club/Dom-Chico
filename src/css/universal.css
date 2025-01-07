@@ -10,8 +10,9 @@
     384px = 24rem
 */
 
-:root{
+:root {
     --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
     --Preto: #000;
     --Fundo: #F3E9DC;
     --Creme: #E3CAB1;
@@ -25,7 +26,7 @@
     --Hover: 0.15s;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -51,11 +52,11 @@ svg {
 
 /* CLASSES REUTILIZÁVEIS */
 
-.title{
+.title {
     font-size: 2.25rem;
 }
 
-.title-color{
+.title-color {
     text-transform: capitalize;
     font-weight: bold;
     color: var(--Laranja);
@@ -65,7 +66,7 @@ svg {
 
 /* NAVBAR */
 
-.navbar{
+.navbar {
     width: 5rem;
     height: 100vh;
     position: fixed;
@@ -74,7 +75,7 @@ svg {
     z-index: 1;
 }
 
-.navbar-nav{
+.navbar-nav {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -85,42 +86,42 @@ svg {
     margin-bottom: auto;
 }
 
-.logo{
+.logo {
     margin-bottom: 1.5rem;
     width: 100%;
 }
 
-.logo img{
+.logo img {
     width: 80px;
     height: 80px;
 }
 
-.logo-text{
+.logo-text {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2rem;
     text-wrap: nowrap;
 }
 
-.nav-item{
+.nav-item {
     width: 100%;
     height: 100%;
     padding: 0.5rem 0;
     transition: all 0.15s ease-in-out;
 }
 
-.nav-link{
+.nav-link {
     display: flex;
     align-items: center;
 }
 
-.link-text{
+.link-text {
     display: none;
     font-size: 1.25rem;
     color: var(--Branco);
 }
 
-.toggle-nav{
+.toggle-nav {
     display: none;
 }
 
@@ -128,13 +129,14 @@ svg {
 
 .utility-container{
     width: 100%;
-    padding-left: clamp(4px, 10vw, 480px); /* 384px + 5rem da navbar + 8px de padding */
+    padding-left: clamp(4px, 10vw, 480px);
+    /* 384px + 5rem da navbar + 8px de padding */
     padding-right: clamp(4px, 10vw, 384px);
     background-color: var(--Vinho);
     transition: all 0.3s ease;
 }
 
-.utility-bar{
+.utility-bar {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -143,7 +145,7 @@ svg {
     color: var(--Branco);
 }
 
-.promo-bar{
+.promo-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,27 +156,27 @@ svg {
     border-bottom: 1px solid var(--Branco);
 }
 
-.coupon{
+.coupon {
     font-weight: bold;
     font-size: 1.25rem;
     text-wrap: nowrap;
     overflow-x: scroll;
 }
 
-.utilities{
+.utilities {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.search-bar{
+.search-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.search-btn{
+.search-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,13 +195,86 @@ svg {
     border: none;
 }
 
-.utility-icons{
+.utility-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
+/*FOOTER*/
+
+.footer-container {
+    margin-top: 4rem;
+    background-color: var(--Azul);
+}
+
+.footer {
+    color: var(--BrancoSuave);
+    padding: 1rem;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 20%;
+    min-width: 200px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer-brand h2 {
+    color: var(--Laranja);
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-size: 1rem;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-section ul li a i {
+    margin-right: 0.5rem;
+}
+
+.flag-image {
+    max-width: 30%;
+    height: auto;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--BrancoSuave);
+    margin-top: 2rem;
+    padding-top: 0.8rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: 1 1 auto;
+    }
+}
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
@@ -207,7 +282,7 @@ svg {
 /* TELAS PEQUENAS */
 
 @media (max-width: 900px) {
-    .navbar{
+    .navbar {
         top: 0;
         left: -92vw;
         position: fixed;
@@ -217,7 +292,7 @@ svg {
         border-radius: 0 10px 10px 0;
     }
 
-    .navbar-nav{
+    .navbar-nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -225,11 +300,11 @@ svg {
         height: 100%;
     }
 
-    .logo{
+    .logo {
         display: none;
     }
 
-    .nav-item{
+    .nav-item {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -238,11 +313,11 @@ svg {
         margin-left: auto;
     }
 
-    .nav-link{
+    .nav-link {
         height: 100%;
     }
 
-    .toggle-nav{
+    .toggle-nav {
         display: flex;
         justify-content: center;
         transform: rotate(0deg);
@@ -253,7 +328,7 @@ svg {
         border-radius: 0 10px 10px 0;
     }
 
-    .icon-arrow{
+    .icon-arrow {
         fill: var(--Branco);
     }
 
@@ -263,6 +338,11 @@ svg {
 
     .promo-text, .socials{
         font-size: 0.875rem;
+    }
+    
+    .footer-container {
+        padding-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(5rem, 10vw, 384px);
     }
 }
 
@@ -278,11 +358,11 @@ svg {
 }
 
 @media (max-width: 600px) {
-    .navbar{
+    .navbar {
         height: 88px;
     }
 
-    .promo-bar{
+    .promo-bar {
         justify-content: center;
     }
 
@@ -290,12 +370,18 @@ svg {
         font-size: 1.125rem;
     }
 
-    .promo-text, .socials{
+    .promo-text,
+    .socials {
         display: none;
     }
 
     .utility-icons{
         gap: 0.5rem;
+    }
+
+    .footer-container {
+        padding-left: clamp(4px, 5vw, 464px);
+        padding-right: clamp(4px, 5vw, 384px);
     }
 }
 
@@ -328,36 +414,41 @@ svg {
 /* TELAS GRANDES */
 
 @media (min-width: 901px) {
-    .navbar{
+    .navbar {
         box-shadow: 4px 0 10px rgba(0, 0, 0, 25%);
     }
 
-    .nav-link svg{
+    .nav-link svg {
         min-width: 2rem;
         margin: 0 1.5rem;
     }
 
-    .navbar:hover{
+    .navbar:hover {
         width: 16rem;
     }
 
-    .navbar:hover .link-text{
+    .navbar:hover .link-text {
         display: block;
     }
-    
-    .nav-item:hover{
+
+    .nav-item:hover {
         background-color: var(--Branco);
     }
-    
-    .nav-item:hover svg{
-        color: var(--Preto);
-    }
-    
-    .nav-item:hover .link-text{
+
+    .nav-item:hover svg {
         color: var(--Preto);
     }
 
     .search-input {
         width: 384px;
+    }
+    
+    .nav-item:hover .link-text {
+        color: var(--Preto);
+    }
+
+    .footer-container {
+        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(4px, 10vw, 384px);
     }
 }
