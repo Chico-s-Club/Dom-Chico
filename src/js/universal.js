@@ -7,7 +7,6 @@ function toggleNavbar() {
     // Faz a navbar desaparecer
     if (currentStyle === '0px' || currentStyle === '0') {
         navbar.style.left = '-90vw';
-        iconArrow.style.transform = 'rotate(0deg)';
         iconArrow.style.fill = 'white';
         toggleItem.style.backgroundColor = 'var(--Laranja)';
     

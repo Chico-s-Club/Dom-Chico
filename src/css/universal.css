@@ -65,12 +65,18 @@ svg {
 
 .logo{
     margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
 }
 
 .logo-text{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .nav-item{
@@ -174,7 +180,7 @@ svg {
     .navbar:hover{
         width: 16rem;
     }
-    
+
     .navbar:hover .link-text{
         display: block;
     }
