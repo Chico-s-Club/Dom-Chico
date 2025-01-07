@@ -7,6 +7,7 @@ function toggleNavbar() {
     // Faz a navbar desaparecer
     if (currentStyle === '0px' || currentStyle === '0') {
         navbar.style.left = '-90vw';
+        iconArrow.style.transform = 'rotate(0deg)';
         iconArrow.style.fill = 'white';
         toggleItem.style.backgroundColor = 'var(--Laranja)';
     
@@ -21,7 +22,7 @@ function toggleNavbar() {
 
 function adjustNavBarPosition() {
     const navbar = document.getElementById('navbar');
-    const mediaQuery = window.matchMedia('(min-width: 601px)');
+    const mediaQuery = window.matchMedia('(min-width: 901px)');
     const toggleItem = document.getElementById('toggle-nav');
     const iconArrow = document.getElementById('icon-arrow');
     
