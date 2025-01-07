@@ -149,12 +149,7 @@ svg {
 
 /* TELAS PEQUENAS */
 
-@media only screen and (max-width: 900px) {
-    main{
-        margin-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
-        margin-right: clamp(5rem, 10vw, 384px);
-    }
-
+@media (max-width: 900px) {
     .navbar{
         top: 0;
         left: -90vw;
@@ -209,11 +204,6 @@ svg {
 }
 
 @media (max-width: 600px) {
-    main{
-        margin-left: clamp(8px, 5vw, 464px);
-        margin-right: clamp(8px, 5vw, 384px);
-    }
-
     .promo-bar{
         justify-content: center;
     }
@@ -230,12 +220,7 @@ svg {
 
 /* TELAS GRANDES */
 
-@media only screen and (min-width: 901px) {
-    main{
-        margin-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
-        margin-right: clamp(8px, 10vw, 384px);
-    }
-
+@media (min-width: 901px) {
     .navbar{
         box-shadow: 4px 0 10px rgba(0, 0, 0, 25%);
     }

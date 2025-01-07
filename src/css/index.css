@@ -157,3 +157,28 @@
 .swiper-pagination-bullet-active {
     background-color: var(--Laranja);
 }
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* TELAS PEQUENAS */
+@media (max-width: 900px) {
+    .testimonials-container, .teste{
+        padding-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(5rem, 10vw, 384px);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonials-container, .teste{
+        padding-left: clamp(8px, 5vw, 464px);
+        padding-right: clamp(8px, 5vw, 384px);
+    }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 901px) {
+    .testimonials-container, .teste{
+        padding-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(8px, 10vw, 384px);
+    }
+}
