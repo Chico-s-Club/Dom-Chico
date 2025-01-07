@@ -250,18 +250,13 @@
     }
 
     .testimonials-container, .teste, .approval-container, .caroussel-container{
-        padding-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
-        padding-right: clamp(5rem, 10vw, 384px);
+        padding: 0 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .approval-icon svg{
         margin-bottom: auto;
-    }
-
-    .testimonials-container, .teste, .approval-container, .caroussel-container{
-        padding: 0 1rem;
     }
 }
 
