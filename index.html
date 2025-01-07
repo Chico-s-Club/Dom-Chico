@@ -90,7 +90,7 @@
         <!-- Fim da NavBar -->
 
         <!-- Início da Barra Utilitária  -->
-        <div class="utility-wrapper" id="utility-wrapper">
+        <div class="utility-container" id="utility-container">
 
             <div class="utility-bar">
                 <div class="promo-bar">
@@ -106,8 +106,8 @@
 
                 <div class="utilities">
 
-                    <div class="navbar-bt search-container">
-                        <div class="container-fluid">
+                    <div class="navbar-bt">
+                        <div class="container-fluid search-container">
                           <form class="d-flex" role="search">
                             <div class="search-bar">
                                 <input class="search-input form-control" type="search" placeholder="Pesquisar" aria-label="Search">
@@ -226,15 +226,38 @@
 
         </div>
 
-
+        <!-- Início do Carrossel de Produtos -->
         <div class="caroussel-container">
 
             <h1 class="title">Nossos <span class="title-color">Produtos</span></h1>
 
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
         </div>
-
+        <!-- Fim do Carrossel de Produtos -->
         
-
+        <!-- Início dos Comentários -->
         <div class="testimonials-container">
             <div class="testimonials" id="testimonials">
                 <div class="testimonials-header" id="testimonials-header">
@@ -260,6 +283,8 @@
                 </div>
             </div>
         </div>
+        <!-- Fim dos Comentários -->
+
     </main>
     <!-- Fim da Main -->
 
