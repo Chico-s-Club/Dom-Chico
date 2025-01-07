@@ -261,8 +261,7 @@
     }
 
     .testimonials-container, .teste, .approval-container, .caroussel-container{
-        padding-left: clamp(4px, 5vw, 464px);
-        padding-right: clamp(4px, 5vw, 384px);
+        padding: 0 1rem;
     }
 }
 
