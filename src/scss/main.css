@@ -739,8 +739,8 @@ progress {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5); /* calc(var(--bs-gutter-x) * 0.5) */
+  padding-left: 0; /* calc(var(--bs-gutter-x) * 0.5) */
   margin-right: auto;
   margin-left: auto;
 }
@@ -2121,7 +2121,8 @@ progress {
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
-  border-radius: var(--bs-border-radius);
+  border-right: none; /* N/A */
+  border-radius: 10px 0 0 10px; /* var(--bs-border-radius) */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2138,9 +2139,9 @@ progress {
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: #86b7fe;
+  /* border-color: #86b7fe; */
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0; /* 0 0 0 0.25rem rgba(13, 110, 253, 0.25) */
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -3908,7 +3909,7 @@ textarea.form-control-lg {
 
 .navbar-bt {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 0.5rem; /* 0.5rem */
   --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
@@ -3932,7 +3933,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x); /* var(--bs-navbar-padding-y) var(--bs-navbar-padding-x) */
 }
 .navbar-bt > .container,
 .navbar-bt > .container-fluid,

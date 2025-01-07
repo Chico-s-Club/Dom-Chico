@@ -1,3 +1,15 @@
+/*
+    14px = 0.875rem
+    18px = 1.125rem
+    20px = 1,25rem
+    24px = 1.5rem
+    36px = 2.25rem
+    40px = 2.5rem
+    64px = 4rem
+    192px = 12rem
+    384px = 24rem
+*/
+
 :root{
     --Branco: #fff;
     --BrancoSuave: #f7f7f7;
@@ -12,6 +24,66 @@
     --VermelhoVibrante: #D72638;
     --Marrom: #511B06;
     --Hover: 0.15s;
+}
+
+/* SELOS DE APROVAÇÃO */
+
+.approval-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 12rem;
+}
+
+.approval-block{
+    display: flex;
+}
+
+.approval-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.approval-item{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.approval-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.approval-icon svg{
+    width: 48px;
+    height: 48px;
+}
+
+.approval-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.approval-info h3{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* CARROSSEL DE PRODUTOS */
+.caroussel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A78BF;
 }
 
 /*ESILIZAÇÃO CLIENTES*/
@@ -38,15 +110,6 @@
 .testimonials-header h1 {
     font-size: 1rem;
     font-weight: 400;
-}
-
-.testimonials-header h2 {
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.testimonials-header h2 span {
-    color: var(--Laranja);
 }
 
 .testimonials-header p {
@@ -161,24 +224,60 @@
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* TELAS PEQUENAS */
+
 @media (max-width: 900px) {
-    .testimonials-container, .teste{
+    .approval-block{
+        flex-direction: column;
+    }
+
+    .approval-item{
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: none;
+        height: 100%;
+    }
+
+    .approval-info h3{
+        font-size: 0.875rem;
+    }
+
+    .approval-info{
+        font-size: 0.875rem;
+    }
+
+    .approval-info, .approval-info h3{
+        text-align: center;
+    }
+
+    .testimonials-container, .teste, .approval-container, .caroussel-container{
         padding-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
         padding-right: clamp(5rem, 10vw, 384px);
     }
 }
 
 @media (max-width: 600px) {
-    .testimonials-container, .teste{
-        padding-left: clamp(8px, 5vw, 464px);
-        padding-right: clamp(8px, 5vw, 384px);
+    .approval-icon svg{
+        margin-bottom: auto;
+    }
+
+    .testimonials-container, .teste, .approval-container, .caroussel-container{
+        padding-left: clamp(4px, 5vw, 464px);
+        padding-right: clamp(4px, 5vw, 384px);
+    }
+}
+
+@media (max-width: 480px) {
+    .approval-icon svg{
+        width: 30px;
+        height: 30px;
     }
 }
 
 /* TELAS GRANDES */
+
 @media (min-width: 901px) {
-    .testimonials-container, .teste{
-        padding-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
-        padding-right: clamp(8px, 10vw, 384px);
+    .testimonials-container, .teste, .approval-container, .caroussel-container{
+        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(4px, 10vw, 384px);
     }
 }
