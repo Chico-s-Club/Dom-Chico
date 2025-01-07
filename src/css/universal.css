@@ -107,7 +107,6 @@ svg {
 
 .utility-wrapper{
     width: 100%;
-    height: 100px;
     padding-left: clamp(8px, 10vw, 464px); /* 384px + 5rem da navbar */
     padding-right: clamp(8px, 10vw, 384px);
     background-color: var(--Vinho);
@@ -115,7 +114,6 @@ svg {
 
 .utility-bar{
     width: 100%;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +127,7 @@ svg {
     align-items: center;
     width: 100%;
     height: fit-content;
-    padding-bottom: 4px;
+    padding: 4px 0;
     text-align: center;
     border-bottom: 1px solid var(--Branco);
 }
@@ -137,6 +135,12 @@ svg {
 .coupon{
     font-weight: bold;
     font-size: 1.25rem;
+}
+
+.utility{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -155,6 +159,7 @@ svg {
         top: 0;
         left: -90vw;
         position: fixed;
+        z-index: 1;
         width: 100vw;
         height: 4rem;
         padding: 0;
@@ -201,7 +206,6 @@ svg {
     .icon-arrow{
         fill: var(--Branco);
     }
-
 }
 
 @media (max-width: 600px) {
@@ -212,6 +216,10 @@ svg {
 
     .promo-bar{
         justify-content: center;
+    }
+
+    .coupon{
+        font-size: 18px;
     }
 
     .promo-text, .socials{
