@@ -6,9 +6,13 @@
     28px = 1.75rem
     36px = 2.25rem
     40px = 2.5rem
+    58px = 3.625rem
     64px = 4rem
     192px = 12rem
+    224px = 14rem
+    272px = 17rem
     384px = 24rem
+    464px = 29rem
 */
 
 :root {
@@ -24,7 +28,6 @@
     --AzulClaro: #3A78BF;
     --VermelhoVibrante: #D72638;
     --Marrom: #511B06;
-    --Hover: 0.15s;
 }
 
 /* SELOS DE APROVAÇÃO */
@@ -331,7 +334,7 @@
     .testimonials-container,
     .teste,
     .approval-container,
-    .propaganda-container {
+    .propaganda-container{
         padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
         padding-right: clamp(4px, 10vw, 384px);
     }

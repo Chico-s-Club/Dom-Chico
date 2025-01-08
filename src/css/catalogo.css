@@ -1,0 +1,190 @@
+/*
+    14px = 0.875rem
+    18px = 1.125rem
+    20px = 1,25rem
+    24px = 1.5rem
+    28px = 1.75rem
+    36px = 2.25rem
+    40px = 2.5rem
+    56px = 3.5rem
+    64px = 4rem
+    192px = 12rem
+    224px = 14rem
+    272px = 17rem
+    320px = 20rem
+    384px = 24rem
+    464px = 29rem
+*/
+
+:root {
+    --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+}
+
+/* CATÁLOGO */
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    background-color: var(--AzulClaro);
+}
+
+.catalogue{
+    background-color: var(--Oliva);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.catalogue-card{
+    background-color: var(--Fundo);
+    color: var(--Laranja);
+    border: 1px solid var(--Laranja);
+    border-radius: 0;
+    height: 29rem;
+    width: 17rem;
+    transition: all 0.3s ease;
+}
+
+.card-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid var(--Laranja);
+    margin: 0 1rem;
+}
+
+.card-title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    height: 3.5rem;
+    flex-grow: 1;
+}
+
+.card-price{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.card-btn{
+    background: var(--Fundo);
+    color: var(--Laranja);
+    border: 3px solid var(--Laranja);
+    border-radius: 0;
+    font-size: 1.25rem;
+}
+
+.catalogue-card:hover{
+    background-color: var(--Laranja);
+    color: var(--Branco);
+}
+
+.catalogue-card:hover .card-img{
+    filter: drop-shadow(2px 0 0 white)  /* Direita */
+            drop-shadow(-2px 0 0 white) /* Esquerda */
+            drop-shadow(0 2px 0 white)  /* Inferior */
+            drop-shadow(0 -2px 0 white);/* Superior */
+}
+
+.catalogue-card:hover .card-info{
+    border-color: var(--Branco);
+}
+
+.catalogue-card:hover .card-btn{
+    background-color: var(--Laranja);
+    color: var(--Branco);
+    border-color: var(--Branco);
+}
+
+.catalogue-card:hover .card-btn:hover{
+    background-color: var(--Branco);
+    color: var(--Laranja);
+    border-color: var(--Branco);
+}
+
+
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* TELAS PEQUENAS */
+@media (max-width: 900px) {
+    .main-container{
+        padding: 0 1rem;
+    }
+
+    .catalogue-card {
+        height: fit-content;
+        width: 30%;
+    }
+
+    .card-info{
+        padding: 0;
+        margin: 0.5rem;
+    }
+
+    .card-title{
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogue{
+        gap: 0.5rem;
+    }
+
+    .catalogue-card{
+        width: 42%;
+    }
+
+    .card-info{
+        padding: 0.5rem;
+    }
+
+    .card-title, .card-price, .card-btn{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title{
+        height: 5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .catalogue-card{
+        width: 90%;
+    }
+ 
+    .card-title{
+        height: auto;
+    }
+}
+
+/* TELAS GRANDES */
+
+@media (min-width: 901px) {
+    .main-container{
+        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+}

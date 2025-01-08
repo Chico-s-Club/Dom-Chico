@@ -6,9 +6,13 @@
     28px = 1.75rem
     36px = 2.25rem
     40px = 2.5rem
+    58px = 3.625rem
     64px = 4rem
     192px = 12rem
+    224px = 14rem
+    272px = 17rem
     384px = 24rem
+    464px = 29rem
 */
 
 :root {
@@ -24,7 +28,6 @@
     --AzulClaro: #3A78BF;
     --VermelhoVibrante: #D72638;
     --Marrom: #511B06;
-    --Hover: 0.15s;
 }
 
 * {
@@ -75,7 +78,7 @@ svg {
     position: fixed;
     background-color: var(--Laranja);
     transition: all 0.3s ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .navbar-nav {
@@ -92,6 +95,10 @@ svg {
 .logo {
     margin-bottom: 1.5rem;
     width: 100%;
+}
+
+.logo a:hover{
+    cursor: default;
 }
 
 .logo img {
@@ -226,8 +233,12 @@ svg {
     color: var(--BrancoSuave);
 }
 
+.footer-brand{
+    flex: 2;
+}
+
 .footer-section h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 0;
 }
