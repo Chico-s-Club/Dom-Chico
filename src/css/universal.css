@@ -130,10 +130,9 @@ svg {
 
 /* UTILITY-BAR */
 
-.utility-container{
+.utility-container {
     width: 100%;
-    padding-left: clamp(4px, 10vw, 480px);
-    /* 384px + 5rem da navbar + 8px de padding */
+    padding-left: clamp(4px, 10vw, 480px); /* 384px + 5rem da navbar + 8px de padding */
     padding-right: clamp(4px, 10vw, 384px);
     background-color: var(--Vinho);
     transition: all 0.3s ease;
@@ -189,11 +188,11 @@ svg {
     border: none;
 }
 
-.search-btn:hover{
+.search-btn:hover {
     cursor: pointer;
 }
 
-.search-input{
+.search-input {
     background-color: var(--Branco);
     border: none;
 }
@@ -208,64 +207,72 @@ svg {
 /*FOOTER*/
 
 .footer-container {
-    margin-top: 4rem;
     background-color: var(--Azul);
+    margin-top: 4rem;
+    padding: 2rem 0 0.5rem 0;
 }
 
 .footer {
-    color: var(--BrancoSuave);
-    padding: 1rem;
-}
-
-.footer-sections {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 6%;
 }
 
 .footer-section {
-    flex: 1 1 0;
+    flex: 1;
     min-width: 200px;
-    text-align: start;
-    padding: 0.5rem;
+    color: var(--BrancoSuave);
 }
 
-.footer-brand h2 {
-    color: var(--Laranja);
+.footer-section h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-.footer-section h3 {
+.footer-section h2 {
+    margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .footer-section ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .footer-section ul li {
+    margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
-.footer-section ul li a {
+.footer-section ul li a,
+.footer-bottom a {
     text-decoration: none;
-    color: inherit;
+    color: var(--BrancoSuave);
+    transition: color 0.3s ease-in-out;
 }
 
-.footer-section ul li a i {
-    margin-right: 0.5rem;
+.footer-section ul li a:hover,
+.footer-bottom a:hover {
+    color: var(--Laranja);
 }
 
-.flag-image {
-    max-width: 30%;
+.footer-section img {
+    max-width: 40%;
     height: auto;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--BrancoSuave);
-    margin-top: 2rem;
-    padding-top: 0.8rem;
+    color: var(--BrancoSuave);
     text-align: center;
+    margin-top: 1rem;
+}
+
+.footer-bottom hr {
+    margin-bottom: 0.5rem;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -324,38 +331,39 @@ svg {
         fill: var(--Branco);
     }
 
-    .coupon{
+    .coupon {
         font-size: 1rem;
     }
 
-    .promo-text, .socials{
+    .promo-text,
+    .socials {
         font-size: 0.875rem;
     }
-    
+
     .footer-container {
-        padding-left: clamp(5rem, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-left: clamp(5rem, 10vw, 464px);
         padding-right: clamp(5rem, 10vw, 384px);
     }
 }
 
 @media (max-width: 768px) {
-    .footer-sections {
+    .footer {
         flex-direction: column;
         align-items: center;
     }
 
     .footer-section {
-        flex: 1 1 auto;
+        text-align: center;
     }
 }
 
 @media (max-width: 725px) {
-    .utility-container{
+    .utility-container {
         padding-left: 10vw;
         padding-right: 1rem;
     }
 
-    .search-container{
+    .search-container {
         width: 100%;
     }
 }
@@ -369,7 +377,7 @@ svg {
         justify-content: center;
     }
 
-    .coupon{
+    .coupon {
         font-size: 1.125rem;
     }
 
@@ -378,7 +386,7 @@ svg {
         display: none;
     }
 
-    .utility-icons{
+    .utility-icons {
         gap: 0.5rem;
     }
 
@@ -389,27 +397,27 @@ svg {
 }
 
 @media (max-width: 480px) {
-    .navbar{
+    .navbar {
         height: 82px;
     }
 
-    .utility-container{
+    .utility-container {
         padding-left: 10vw;
         padding-right: 0.5rem;
     }
 
-    .coupon{
+    .coupon {
         font-size: 0.875rem;
     }
 
-    .utility-icons svg{
+    .utility-icons svg {
         width: 28px;
         height: 28px;
     }
 }
 
 @media (max-width: 335px) {
-    .utility-icons{
+    .utility-icons {
         gap: 0;
     }
 }
@@ -451,7 +459,7 @@ svg {
     }
 
     .footer-container {
-        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-left: clamp(4px, 10vw, 464px);
         padding-right: clamp(4px, 10vw, 384px);
     }
 }
