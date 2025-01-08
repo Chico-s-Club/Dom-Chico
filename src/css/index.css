@@ -3,6 +3,7 @@
     18px = 1.125rem
     20px = 1,25rem
     24px = 1.5rem
+    28px = 1.75rem
     36px = 2.25rem
     40px = 2.5rem
     64px = 4rem
@@ -79,11 +80,61 @@
 }
 
 /* CARROSSEL DE PRODUTOS */
-.caroussel-container {
+
+.propaganda-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #3A78BF;
+}
+
+.propaganda-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.propaganda-item{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.caroussel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Oliva);
+}
+
+.caroussel-img{
+    width: 500px;
+    height: 500px;
+}
+
+.propaganda-info{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.propaganda-info h2{
+    font-size: 1.75rem;
+    color: var(--Laranja);
+    margin-bottom: 1.5rem;
+}
+
+.propaganda-info p{
+    font-size: 1.25rem;
+}
+
+.propaganda-info span{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--Laranja);
+    text-transform: capitalize;
+    margin-top: 2rem;
 }
 
 /*ESILIZAÇÃO CLIENTES*/
@@ -142,7 +193,7 @@
 .user-icon {
     width: 40px;
     height: 40px;
-    background-image: url(); /*ARRUMA AQUI PRA MIM MATEUS*/
+    background-image: url('../elements/imgs/user-cliente.svg');
     background-size: cover;
     border-radius: 100%;
 }
@@ -189,7 +240,7 @@
     background-color: #fff;
     width: 25px;
     height: 25px;
-    color: #3758f9;
+    color: var(--Laranja);
     border: 1px solid #f9fafb;
     border-radius: 100%;
     box-shadow: 0px 0px 20px 0px (92, 115, 160, 0.2);
@@ -252,7 +303,10 @@
         text-align: center;
     }
 
-    .testimonials-container, .teste, .approval-container, .caroussel-container{
+    .testimonials-container, 
+    .teste, 
+    .approval-container, 
+    .propaganda-container{
         padding: 0 1rem;
     }
 }
@@ -277,7 +331,7 @@
     .testimonials-container,
     .teste,
     .approval-container,
-    .caroussel-container {
+    .propaganda-container {
         padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
         padding-right: clamp(4px, 10vw, 384px);
     }
