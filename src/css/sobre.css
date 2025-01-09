@@ -1,0 +1,79 @@
+:root {
+    --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+}
+
+/*SEÇÃO 1*/
+
+.brand-container {
+    background-color: rgba(220, 114, 14, 0.7); /* 70% de opacidade */
+    color: var(--BrancoSuave);
+}
+
+.sobre-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.sobre-texto {
+    max-width: 60%;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+/*FIM DA SEÇÃO*/
+
+/* Responsividade */
+/* @media (max-width: 1100px) {
+    .sobre-secao {
+        padding: 2rem 0;
+    }
+} */
+
+@media (max-width: 768px) {
+    .sobre-secao {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        max-width: 100px;
+    }
+}
+
+
+/*MEDIA QUERYS*/
+
+@media (min-width: 901px) {
+
+    .brand-container {
+        padding-left: clamp(4px, 10vw, 464px);
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+}
