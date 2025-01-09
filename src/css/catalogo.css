@@ -1,0 +1,231 @@
+/*
+    14px = 0.875rem
+    18px = 1.125rem
+    20px = 1,25rem
+    24px = 1.5rem
+    28px = 1.75rem
+    36px = 2.25rem
+    40px = 2.5rem
+    56px = 3.5rem
+    64px = 4rem
+    192px = 12rem
+    224px = 14rem
+    272px = 17rem
+    320px = 20rem
+    384px = 24rem
+    464px = 29rem
+*/
+
+:root {
+    --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+}
+
+/* CATÁLOGO */
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.filter{
+    background-color: var(--Vinho);
+    border-radius: 10px;
+    padding: 1rem min(1.2rem, 10%) 2rem 1rem;
+    color: var(--Branco);
+    flex: 1;
+    
+}
+
+.filter fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.filter fieldset:not(:last-child){
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--Branco);
+}
+
+.filter fieldset input[type="radio"] {
+    border-radius: 0;
+}
+  
+.catalogue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    flex: 5;
+}
+
+.catalogue-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-result h1{
+    font-size: 2rem;
+    color: var(--Preto);
+}
+
+.cards{
+    justify-content: space-between;
+    padding: 0;
+    
+}
+
+.catalogue-card{
+    background-color: var(--Fundo);
+    color: var(--Laranja);
+    border: 1px solid var(--Laranja);
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.catalogue-card:last-child{
+    margin-right: auto;
+}
+
+.card-info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-info::before{
+    content: ''; /* Necessário para pseudo-elementos */
+    position: absolute;
+    top: 0; /* Posiciona no topo */
+    left: 10%; /* Começa após 10% da largura */
+    right: 10%; /* Termina antes de 10% da largura */
+    height: 2px; /* Espessura da borda */
+    background-color: var(--Laranja); /* Cor da borda */
+}
+
+.card-title{
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-price{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.card-btn{
+    background: var(--Fundo);
+    color: var(--Laranja);
+    border: 3px solid var(--Laranja);
+    border-radius: 0;
+    font-size: 1.25rem;
+}
+
+.custom-button{
+    font-size: 1.25rem;
+    width: 12rem;
+    height: 3.5rem;
+}
+
+.custom-button .plus-icon{
+    background-image: url('../elements/icons/icon-mais.svg');
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* TELAS PEQUENAS */
+
+@media (max-width: 1200px) {
+    .card-title, .card-btn{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-container{
+        padding: 0 1rem;
+    }
+
+    .filter{
+        display: none;
+    }
+
+    .custom-button{
+        background-color: var(--Laranja);
+        color: var(--Branco);
+    }
+}
+
+@media (max-width: 24rem) {
+    .row > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* TELAS GRANDES */
+
+@media (min-width: 1200px) {
+    .catalogue-card:hover{
+        background-color: var(--Laranja);
+        color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-img{
+        filter: drop-shadow(3px 0 0 white)  /* Direita */
+                drop-shadow(-3px 0 0 white) /* Esquerda */
+                drop-shadow(0 3px 0 white)  /* Inferior */
+                drop-shadow(0 -3px 0 white);/* Superior */
+    }
+    
+    .catalogue-card:hover .card-info{
+        border-color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-btn{
+        background-color: var(--Laranja);
+        color: var(--Branco);
+        border-color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-btn:hover{
+        background-color: var(--Branco);
+        color: var(--Laranja);
+        border-color: var(--Branco);
+    }
+}
+
+@media (min-width: 901px) {
+    .main-container{
+        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+}

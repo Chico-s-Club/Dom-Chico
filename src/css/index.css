@@ -6,9 +6,13 @@
     28px = 1.75rem
     36px = 2.25rem
     40px = 2.5rem
+    58px = 3.625rem
     64px = 4rem
     192px = 12rem
+    224px = 14rem
+    272px = 17rem
     384px = 24rem
+    464px = 29rem
 */
 
 :root {
@@ -24,7 +28,6 @@
     --AzulClaro: #3A78BF;
     --VermelhoVibrante: #D72638;
     --Marrom: #511B06;
-    --Hover: 0.15s;
 }
 
 /* SELOS DE APROVAÇÃO */
@@ -89,53 +92,248 @@
     background-color: #3A78BF;
 }
 
-.propaganda-content{
+.propaganda-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.propaganda-item{
+.propaganda-item {
     flex-grow: 1;
     flex-basis: 0;
 }
 
-.caroussel-container{
+.caroussel-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--Oliva);
 }
 
-.caroussel-img{
+.caroussel-img {
     width: 500px;
     height: 500px;
 }
 
-.propaganda-info{
+.propaganda-info {
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
 }
 
-.propaganda-info h2{
+.propaganda-info h2 {
     font-size: 1.75rem;
     color: var(--Laranja);
     margin-bottom: 1.5rem;
 }
 
-.propaganda-info p{
+.propaganda-info p {
     font-size: 1.25rem;
 }
 
-.propaganda-info span{
+.propaganda-info span {
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--Laranja);
     text-transform: capitalize;
     margin-top: 2rem;
 }
+
+/*OS PRODUTO AQUI SÔ*/
+
+.products-header {
+    text-align: center;
+    color: var(--Preto);
+    margin-bottom: 2rem;
+}
+
+.products-header h1 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Fundo);
+}
+
+.products {
+    width: 80%;
+    margin: 0 auto,
+}
+
+.products-swiper {
+    width: 100%;
+}
+
+#products-container .swiper-slide {
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.content .content-specification span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--Laranja);
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+}
+
+/*animação aqui, deixar isso melhor depois ajustar*/
+
+.content-specification {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.7s;
+}
+
+.swiper-slide .content h1 {
+    color: var(--Laranja);
+    font-weight: bold;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+}
+
+.swiper-slide .content p {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.7s;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.8s;
+}
+
+.button-wrapper {
+    margin-top: 0.5rem;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 0.7s;
+}
+
+.swiper-slide-active .content h1,
+.swiper-slide-active .content p,
+.swiper-slide-active .image-container img,
+.swiper-slide-active .button-wrapper,
+.swiper-slide-active .content-specification {
+    transform: none;
+    opacity: 1;
+}
+
+/*Fim da animação, fica esperto*/
+
+.nav-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-carousel i {
+    color: var(--Laranja);
+}
+
+/*se liga no meu botao ( ͡° ͜ʖ ͡°)*/
+
+.custom-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: var(--Fundo);
+    color: var(--Laranja);
+    border: 3px solid var(--Laranja);
+    border-radius: 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /*ajustar conforme o tamanho final primeiro use "auto"*/
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+.custom-button .button-text {
+    transition: transform 0.3s;
+}
+
+.custom-button .button-icon {
+    display: none;
+    margin-left: 10px;
+}
+
+.custom-button .arrow-icon,
+.custom-button .catalog-icon {
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.custom-button .arrow-icon {
+    background-image: url('../elements/icons/icon-seta.svg');
+}
+
+.custom-button .catalog-icon {
+    background-image: url('../elements/icons/icon-catalogo.svg');
+    width: 16px;
+    height: 16px;
+}
+
+.custom-button:hover {
+    background-color: var(--Laranja);
+    color: var(--BrancoSuave);
+}
+
+.custom-button:hover .button-text {
+    transform: translateX(-10px);
+}
+
+.custom-button:hover .button-icon {
+    display: block;
+}
+
+.custom-button:hover .arrow-icon,
+.custom-button:hover .catalog-icon {
+    transform: translateX(0);
+}
+
+/*botao especial cabo*/
+
+.button-next,
+.button-prev {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
 
 /*ESILIZAÇÃO CLIENTES*/
 
@@ -150,7 +348,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 2rem 6%; /*6 ou 8 não decidi*/
+    padding: 2rem 6%;
 }
 
 .testimonials-header {
@@ -168,7 +366,7 @@
     max-width: 485px;
 }
 
-.swiper {
+.swiper.testimonials-swiper {
     width: 100%;
     height: 339px;
     padding-bottom: 3rem;
@@ -193,7 +391,7 @@
 .user-icon {
     width: 40px;
     height: 40px;
-    background-image: url('../elements/imgs/user-cliente.svg');
+    background-image: url('../elements/icons/user-cliente.svg');
     background-size: cover;
     border-radius: 100%;
 }
@@ -235,48 +433,64 @@
     color: #000;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+/* Navegação de Avaliações */
+.testimonials-swiper .swiper-button-prev.testimonials-button-prev,
+.testimonials-swiper .swiper-button-next.testimonials-button-next {
     background-color: #fff;
     width: 25px;
     height: 25px;
     color: var(--Laranja);
     border: 1px solid #f9fafb;
     border-radius: 100%;
-    box-shadow: 0px 0px 20px 0px (92, 115, 160, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(92, 115, 160, 0.2);
 }
 
-.swiper-button-prev::after {
+.testimonials-swiper .swiper-button-prev.testimonials-button-prev::after {
     content: '\f053';
     font-family: 'Font Awesome 5 free';
     font-weight: 900;
     font-size: 14px;
 }
 
-.swiper-button-next::after {
+.testimonials-swiper .swiper-button-next.testimonials-button-next::after {
     content: '\f054';
     font-family: 'Font Awesome 5 free';
     font-weight: 900;
     font-size: 14px;
 }
 
-.swiper-button-next {
+.testimonials-swiper .swiper-button-next.testimonials-button-next {
     right: 1px;
 }
 
-.swiper-button-prev {
+.testimonials-swiper .swiper-button-prev.testimonials-button-prev {
     left: 1px;
 }
 
-.swiper-pagination-bullet-active {
+.testimonials-swiper .swiper-pagination.testimonials-pagination .swiper-pagination-bullet-active {
     background-color: var(--Laranja);
 }
-
-/*FOOTER*/
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* TELAS PEQUENAS */
+
+@media (max-width: 1260px) {
+    #products-container .swiper-slide {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .products {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 70%; /*ajustar conforme achar melhor o tamanho da imagem*/
+        height: auto;
+    }
+}
 
 @media (max-width: 900px) {
     .approval-block {
@@ -303,11 +517,24 @@
         text-align: center;
     }
 
-    .testimonials-container, 
-    .teste, 
-    .approval-container, 
-    .propaganda-container{
+    .testimonials-container,
+    .teste,
+    .approval-container,
+    .propaganda-container {
         padding: 0 1rem;
+    }
+}
+
+@media (max-width: 780px) {
+    #products-container .swiper-slide {
+        display: flex;  /*ajustar quando quiser que quebra*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 60%; /*ajustar conforme achar melhor o tamanho da imagem*/
+        height: auto;
     }
 }
 
@@ -331,8 +558,9 @@
     .testimonials-container,
     .teste,
     .approval-container,
-    .propaganda-container {
-        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+    .propaganda-container,
+    .products-container {
+        padding-left: clamp(4px, 10vw, 464px);
         padding-right: clamp(4px, 10vw, 384px);
     }
 }

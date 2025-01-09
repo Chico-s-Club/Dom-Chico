@@ -6,9 +6,13 @@
     28px = 1.75rem
     36px = 2.25rem
     40px = 2.5rem
+    58px = 3.625rem
     64px = 4rem
     192px = 12rem
+    224px = 14rem
+    272px = 17rem
     384px = 24rem
+    464px = 29rem
 */
 
 :root {
@@ -24,7 +28,6 @@
     --AzulClaro: #3A78BF;
     --VermelhoVibrante: #D72638;
     --Marrom: #511B06;
-    --Hover: 0.15s;
 }
 
 * {
@@ -65,6 +68,53 @@ svg {
     color: var(--Laranja);
 }
 
+.custom-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: var(--Fundo);
+    color: var(--Laranja);
+    border: 3px solid var(--Laranja);
+    border-radius: 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* ajustar conforme o tamanho final primeiro use "auto" */
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+.custom-button .button-text {
+    transition: transform 0.3s;
+}
+
+.custom-button .button-icon {
+    display: none;
+    margin-left: 10px;
+}
+
+.custom-button .arrow-icon,
+.custom-button .catalog-icon,
+.custom-button .plus-icon {
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.custom-button .arrow-icon {
+    background-image: url('../elements/icons/icon-seta.svg');
+}
+
+.custom-button .catalog-icon {
+    background-image: url('../elements/icons/icon-catalogo.svg');
+    width: 16px;
+    height: 16px;
+}
+
 /* ---------------------------------------- */
 
 /* NAVBAR */
@@ -75,7 +125,7 @@ svg {
     position: fixed;
     background-color: var(--Laranja);
     transition: all 0.3s ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .navbar-nav {
@@ -92,6 +142,10 @@ svg {
 .logo {
     margin-bottom: 1.5rem;
     width: 100%;
+}
+
+.logo a:hover{
+    cursor: default;
 }
 
 .logo img {
@@ -226,8 +280,12 @@ svg {
     color: var(--BrancoSuave);
 }
 
+.footer-brand{
+    flex: 2;
+}
+
 .footer-section h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -343,6 +401,10 @@ svg {
     .footer-container {
         padding-left: clamp(5rem, 10vw, 464px);
         padding-right: clamp(5rem, 10vw, 384px);
+    }
+
+    .custom-button .button-icon {
+        display: block;
     }
 }
 
@@ -461,5 +523,23 @@ svg {
     .footer-container {
         padding-left: clamp(4px, 10vw, 464px);
         padding-right: clamp(4px, 10vw, 384px);
+    }
+
+    .custom-button:hover {
+        background-color: var(--Laranja);
+        color: var(--BrancoSuave);
+    }
+    
+    .custom-button:hover .button-text {
+        transform: translateX(-10px);
+    }
+    
+    .custom-button:hover .button-icon {
+        display: block;
+    }
+    
+    .custom-button:hover .arrow-icon,
+    .custom-button:hover .catalog-icon {
+        transform: translateX(0);
     }
 }
