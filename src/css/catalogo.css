@@ -35,19 +35,63 @@
 
 .main-container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: start;
     margin-top: 4rem;
-    background-color: var(--AzulClaro);
+    gap: 2rem;
 }
 
+.filter{
+    background-color: var(--Vinho);
+    border-radius: 10px;
+    padding: 1rem min(1.2rem, 10%) 2rem 1rem;
+    color: var(--Branco);
+    flex: 1;
+    
+}
+
+.filter fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.filter fieldset:not(:last-child){
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--Branco);
+}
+
+.filter fieldset input[type="radio"] {
+    border-radius: 0;
+}
+  
 .catalogue{
-    background-color: var(--Oliva);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.25rem;
+    flex: 5;
+}
+
+.catalogue-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-result h1{
+    font-size: 2rem;
+    color: var(--Preto);
+}
+
+.cards{
+    justify-content: space-between;
+    padding: 0;
+    
 }
 
 .catalogue-card{
@@ -55,25 +99,35 @@
     color: var(--Laranja);
     border: 1px solid var(--Laranja);
     border-radius: 0;
-    height: 29rem;
-    width: 17rem;
     transition: all 0.3s ease;
 }
 
+.catalogue-card:last-child{
+    margin-right: auto;
+}
+
 .card-info{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 2px solid var(--Laranja);
-    margin: 0 1rem;
+}
+
+.card-info::before{
+    content: ''; /* Necessário para pseudo-elementos */
+    position: absolute;
+    top: 0; /* Posiciona no topo */
+    left: 10%; /* Começa após 10% da largura */
+    right: 10%; /* Termina antes de 10% da largura */
+    height: 2px; /* Espessura da borda */
+    background-color: var(--Laranja); /* Cor da borda */
 }
 
 .card-title{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 500;
     text-align: center;
-    height: 3.5rem;
     flex-grow: 1;
 }
 
@@ -93,94 +147,81 @@
     font-size: 1.25rem;
 }
 
-.catalogue-card:hover{
-    background-color: var(--Laranja);
-    color: var(--Branco);
+.custom-button{
+    font-size: 1.25rem;
+    width: 12rem;
+    height: 3.5rem;
 }
 
-.catalogue-card:hover .card-img{
-    filter: drop-shadow(2px 0 0 white)  /* Direita */
-            drop-shadow(-2px 0 0 white) /* Esquerda */
-            drop-shadow(0 2px 0 white)  /* Inferior */
-            drop-shadow(0 -2px 0 white);/* Superior */
+.custom-button .plus-icon{
+    background-image: url('../elements/icons/icon-mais.svg');
+    width: 2rem;
+    height: 2rem;
 }
-
-.catalogue-card:hover .card-info{
-    border-color: var(--Branco);
-}
-
-.catalogue-card:hover .card-btn{
-    background-color: var(--Laranja);
-    color: var(--Branco);
-    border-color: var(--Branco);
-}
-
-.catalogue-card:hover .card-btn:hover{
-    background-color: var(--Branco);
-    color: var(--Laranja);
-    border-color: var(--Branco);
-}
-
-
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* TELAS PEQUENAS */
+
+@media (max-width: 1200px) {
+    .card-title, .card-btn{
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 900px) {
     .main-container{
         padding: 0 1rem;
     }
 
-    .catalogue-card {
-        height: fit-content;
-        width: 30%;
+    .filter{
+        display: none;
     }
 
-    .card-info{
-        padding: 0;
-        margin: 0.5rem;
-    }
-
-    .card-title{
-        margin-bottom: 1.5rem;
+    .custom-button{
+        background-color: var(--Laranja);
+        color: var(--Branco);
     }
 }
 
-@media (max-width: 600px) {
-    .catalogue{
-        gap: 0.5rem;
-    }
-
-    .catalogue-card{
-        width: 42%;
-    }
-
-    .card-info{
-        padding: 0.5rem;
-    }
-
-    .card-title, .card-price, .card-btn{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .card-title{
-        height: 5rem;
-    }
-}
-
-@media (max-width: 320px) {
-    .catalogue-card{
-        width: 90%;
-    }
- 
-    .card-title{
-        height: auto;
+@media (max-width: 24rem) {
+    .row > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
 /* TELAS GRANDES */
+
+@media (min-width: 1200px) {
+    .catalogue-card:hover{
+        background-color: var(--Laranja);
+        color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-img{
+        filter: drop-shadow(3px 0 0 white)  /* Direita */
+                drop-shadow(-3px 0 0 white) /* Esquerda */
+                drop-shadow(0 3px 0 white)  /* Inferior */
+                drop-shadow(0 -3px 0 white);/* Superior */
+    }
+    
+    .catalogue-card:hover .card-info{
+        border-color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-btn{
+        background-color: var(--Laranja);
+        color: var(--Branco);
+        border-color: var(--Branco);
+    }
+    
+    .catalogue-card:hover .card-btn:hover{
+        background-color: var(--Branco);
+        color: var(--Laranja);
+        border-color: var(--Branco);
+    }
+}
 
 @media (min-width: 901px) {
     .main-container{

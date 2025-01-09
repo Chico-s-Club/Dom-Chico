@@ -196,7 +196,7 @@
 .user-icon {
     width: 40px;
     height: 40px;
-    background-image: url('../elements/imgs/user-cliente.svg');
+    background-image: url('../elements/icons/user-cliente.svg');
     background-size: cover;
     border-radius: 100%;
 }

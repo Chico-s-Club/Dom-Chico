@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="src/scss/main.css">
-    <link rel="stylesheet" href="src/css/catalogo.css" type="text/css">
     <link rel="stylesheet" href="src/css/universal.css" type="text/css">
+    <link rel="stylesheet" href="src/css/catalogo.css" type="text/css">
 
     <script src="https://kit.fontawesome.com/a68b900c25.js" crossorigin="anonymous"></script>
 
@@ -203,72 +203,196 @@
 
         <div class="main-container">
 
-            <!-- <div class="filter">
-                <form action="">
+            <div class="filter">
+                <form action="/submit" method="post">
+                    <fieldset>
+                      <legend>Categorias</legend>
+                  
+                      <label>
+                        <input type="radio" name="categoria" value="churrasco">
+                        Churrasco
+                      </label>
+                  
+                      <label>
+                        <input type="radio" name="categoria" value="cozinha">
+                        Cozinha
+                      </label>
+                  
+                      <label>
+                        <input type="radio" name="categoria" value="decoracao">
+                        Decoração
+                      </label>
+                  
+                    </fieldset>
 
-                    <input type="radio">
-                    <label for=""></label>
+                    <fieldset>
+                        <legend>Preços</legend>
+                    
+                        <label>
+                          <input type="radio" name="preco" value="100a200">
+                          R$ 100 a R$ 200
+                        </label>
+                    
+                        <label>
+                          <input type="radio" name="preco" value="300a500">
+                          R$ 300 a R$ 500
+                        </label>
+                    
+                        <label>
+                          <input type="radio" name="preco" value="500a1000">
+                          R$ 500 a R$ 1000
+                        </label>
+                    
+                      </fieldset>
 
+                      <fieldset>
+                        <legend>Madeiras</legend>
+                    
+                        <label>
+                          <input type="radio" name="madeira" value="mogno">
+                          Mogno
+                        </label>
+                    
+                        <label>
+                          <input type="radio" name="madeira" value="cedro">
+                          Cedro
+                        </label>
+                    
+                        <label>
+                          <input type="radio" name="madeira" value="jacarandá">
+                          Jacarandá
+                        </label>
+                    
+                      </fieldset>
+                  
+                    <button type="submit">Enviar</button>
+                  </form>
+                  
+            </div>
 
-                </form>
-            </div> -->
-
-            <!-- Início dos Cards do Catálogo -->
             <div class="catalogue">
                 
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                <div class="catalogue-top">
+
+                    <div class="search-result">
+                        <h1>Bacia de madeira</h1>
+                    </div>
+
+
+                    <div class="sort-btn">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown button
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                    <!-- Início dos Cards do Catálogo -->
+                    <div class="cards container">
+                        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3 g-md-2 justify-content-start">
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="catalogue-card card">
+                                    <img src="src/elements/catalogue/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
+                                    <div class="card-info card-body">
+                                        <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
+                                        <p class="card-price card-text">R$200,00</p>
+                                        <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+
+                    </div>
+                    <!-- Fim dos Cards do Catálogo -->
                 
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
-                    </div>
-                </div>
                 
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
-                    </div>
-                </div>
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
-                    </div>
-                </div>
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira bem top do google</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
-                    </div>
-                </div>
-                <div class="catalogue-card card">
-                    <img src="src/elements/imgs/bacia-de-madeira-avaliacoes.png" class="card-img card-img-top" alt="...">
-                    <div class="card-info card-body">
-                      <h5 class="card-title pt-2">Bacia de madeira</h5>
-                      <p class="card-price card-text">R$200,00</p>
-                      <a href="#" class="card-btn btn btn-primary">Ver Produto</a>
-                    </div>
+
+                <div>
+                    <button class="custom-button">
+                        <span class="button-text">Ver Mais</span>
+                        <span class="button-icon plus-icon"></span>
+                    </button>
                 </div>
 
             </div>
-            <!-- Fim dos Cards do Catálogo -->
+
 
         </div>
 
