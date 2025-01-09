@@ -90,42 +90,84 @@ const mockData = [
       </div> 
     `;
   }
-  
-  const swiper = new Swiper('.swiper', {
-      loop: true,
-      grabCursor:true,
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-      },
-  
-      breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 18
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 18
-          },
-          1188: {
-            slidesPerView: 3,
-            spaceBetween: 24
-          }
-        }
-  });
-  
-  // Carregar dados mockados e adicionar ao Swiper
-  const reviewsContainer = document.getElementById('reviews-container');
-  mockData.forEach(review => {
-    reviewsContainer.innerHTML += createReviewSlide(review);
-  });
-  
-  // Atualizar o Swiper após adicionar os slides
-  swiper.update();
 
-  //fim dos clientes
+// Função para carregar slides de avaliação
+function createReviewSlide(review) {
+  return `
+    <div class="swiper-slide">
+        <div class="testimonial-author">
+            <div class="author-avatar">
+                <div class="user-icon"></div>
+            </div>
+            <div class="author-info">
+                <h3>${review.userName}</h3>
+                <p>Cliente desde ${review.yearLoggedIn}</p>
+            </div>
+        </div>
+        
+        <blockquote class="testimonial-quote">
+            ${review.comment}
+        </blockquote>
+
+        <div class="testimonial-product">
+            <img src="${review.productImage}" alt="Produto" class="product-image">
+            <span class="product-name">${review.productName}</span>
+        </div>
+    </div> 
+  `;
+}
+
+const swiperTestimonials = new Swiper('.testimonials-swiper', {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".testimonials-button-next",
+    prevEl: ".testimonials-button-prev",
+  },
+  pagination: {
+    el: ".testimonials-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 18
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 18
+    },
+    1188: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }
+});
+
+// Carregar dados mockados e adicionar ao Swiper de Avaliações
+const reviewsContainer = document.getElementById('testimonials-container');
+mockData.forEach(review => {
+  reviewsContainer.innerHTML += createReviewSlide(review);
+});
+
+//atualizar o swiper
+swiperTestimonials.update();
+
+//fim dos clientes
+
+// Inicializando o Swiper de Produtos
+const swiperProducts = new Swiper('.products-swiper', {
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  autoplay: { //ajustar isso aqui se quiser que passa
+    delay: 9000, 
+    disableOnInteraction: false, 
+  },
+  slidesPerView: 1,
+  effect: "slide",
+  speed: 900,
+  loop: true,
+  grabCursor: true,
+});

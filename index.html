@@ -273,7 +273,7 @@
         </div>
 
         <!-- Início do Carrossel de Produtos -->
-        <div class="propaganda-container">
+        <!-- <div class="propaganda-container">
 
             <h1 class="title">Nossos <span class="title-color">Produtos</span></h1>
 
@@ -318,10 +318,136 @@
             </div>
 
 
-        </div>
+        </div> -->
         <!-- Fim do Carrossel de Produtos -->
 
+        <!-- <div class="products" id="products">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image-container">
+
+                        </div>
+
+                        <div class="content">
+                            <h1>Cozinha</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias expedita tempora quaerat
+                                quibusdam et quod nostrum cumque ipsam exercitationem pariatur atque, veritatis,
+                                deleniti perferendis ducimus ad dolorum consequuntur tenetur repellat?
+                            </p>
+                            <div class="button-wrapper">
+                                    <button class="custom-button">
+                                        <span class="button-text">Ver Catálogo</span>
+                                        <span class="button-icon arrow-icon"></span>
+                                        <span class="button-icon catalog-icon"></span>
+                                    </button>
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Adicionar o novo Swiper de Produtos -->
+        <div class="products-container">
+            <div class="products" id="products">
+                <div class="products-header" id="products-header">
+                    <h1>Produtos</h1>
+                    <h2>Confira nossos <span class="title-color">Produtos</span></h2>
+                </div>
+                <!-- Slider de Produtos -->
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper" id="products-container">
+                        <!-- Slides de produtos -->
+                        <div class="swiper-slide">
+                            <div class="image-container">
+                                <img src="src/elements/imgs/tigela-dentro-de-outra.png" alt="" class="item-image">
+                            </div>
+
+                            <div class="content">
+                                <h1>Cozinha</h1>
+                                <p>
+                                    Na cozinha, a madeira transcende sua função prática, tornando-se um canal de energia vital. Cada tábua de corte parece armazenar a sabedoria ancestral das florestas, amplificando o poder nutritivo dos alimentos. Dizem que cozinhar em superfícies de madeira é como participar de um ritual cósmico, onde a energia da natureza se transforma em sustento espiritual.
+                                </p>
+                                <div class="content-specification">
+                                    <span>Tábuas | Tigelas | Pilões</span>
+                                </div>
+                                <div class="button-wrapper">
+                                    <button class="custom-button">
+                                        <span class="button-text">Ver Catálogo</span>
+                                        <span class="button-icon arrow-icon"></span>
+                                        <span class="button-icon catalog-icon"></span>
+                                    </button>
+                                </div>                                                                  
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="image-container">
+                                <img src="src/elements/imgs/tigela.png" alt="" class="item-image">
+                            </div>
+
+                            <div class="content">
+                                <h1>Sala</h1>
+                                <p>
+                                    Na sala, as peças de madeira são receptores de memórias universais. Cada estante parece pulsar com histórias ancestrais, transmitindo um campo de energia que conecta os moradores a uma rede invisível de conhecimento. A madeira, com suas vibrações sutis, traz equilíbrio e harmonia ao ambiente, transformando-o em um santuário de sabedoria e paz.
+                                </p>
+                                <div class="content-specification">
+                                    <span>Tábuas | Tigelas | Pilões</span>
+                                </div>
+                                <div class="button-wrapper">
+                                    <button class="custom-button">
+                                        <span class="button-text">Ver Catálogo</span>
+                                        <span class="button-icon arrow-icon"></span>
+                                        <span class="button-icon catalog-icon"></span>
+                                    </button>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="image-container">
+                                <img src="src/elements/imgs/tigela-quadrada.png" alt="" class="item-image">
+                            </div>
+
+                            <div class="content">
+                                <h1>Quarto</h1>
+                                <p>
+                                    No quarto, a madeira cria um elo entre sonhos e realidade. Um simples móvel pode agir como condutor de energias oníricas, armazenando fragmentos de outras dimensões. Com suas fibras entrelaçadas, a madeira harmoniza o espaço, conectando a mente ao fluxo cósmico e promovendo um descanso em sintonia com o universo.
+                                </p>
+                                <div class="content-specification">
+                                    <span>Tábuas | Tigelas | Pilões</span>
+                                </div>
+                                <div class="button-wrapper">
+                                    <button class="custom-button">
+                                        <span class="button-text">Ver Catálogo</span>
+                                        <span class="button-icon arrow-icon"></span>
+                                        <span class="button-icon catalog-icon"></span>
+                                    </button>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <nav class="nav-carousel">
+                        <div class="button-prev">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+
+                        <div class="button-next">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!--Fim dos produto sô-->
+
         <!-- Início dos Comentários -->
+
         <div class="testimonials-container">
             <div class="testimonials" id="testimonials">
                 <div class="testimonials-header" id="testimonials-header">
@@ -332,21 +458,18 @@
                         Confira o que nossos clientes têm a dizer!
                     </p>
                 </div>
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper" id="reviews-container">
-                        <!-- Slides -->
+                <!-- Slider de Avaliações -->
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper" id="testimonials-container">
+                        <!-- Slides de avaliações -->
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination testimonials-pagination"></div>
+                    <div class="swiper-button-prev testimonials-button-prev"></div>
+                    <div class="swiper-button-next testimonials-button-next"></div>
                 </div>
             </div>
         </div>
+
         <!-- Fim dos Comentários -->
 
     </main>
@@ -382,13 +505,14 @@
 
             <div class="footer-section">
                 <h2>Pagamento</h2>
-                <img src="src/elements/imgs/bandeiras.png" alt="Bandeiras aceitas"/>
+                <img src="src/elements/imgs/bandeiras.png" alt="Bandeiras aceitas" />
             </div>
         </div>
 
         <div class="footer-bottom">
-            <hr/>
-            <p>&copy; 2025 Todos os direitos reservados. Criado por <a href="#" target="_blank" rel="noopener noreferrer">Romulus</a></p>
+            <hr />
+            <p>&copy; 2025 Todos os direitos reservados. Criado por <a href="#" target="_blank"
+                    rel="noopener noreferrer">Romulus</a></p>
         </div>
     </footer>
 
@@ -398,4 +522,5 @@
     <script src="src/js/universal.js" defer></script>
     <script src="src/js/index.js"></script>
 </body>
+
 </html>
