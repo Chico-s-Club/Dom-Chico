@@ -13,66 +13,147 @@
     --Marrom: #511B06;
 }
 
-/*SEÇÃO 1*/
+body {
+    background-color: var(--Fundo);
+}
+
+/*SEÇÃO 1 e 2*/
 
 .brand-container {
-    background-color: rgba(220, 114, 14, 0.7); /* 70% de opacidade */
+    background-color: rgba(220, 114, 14, 0.7);
+    /* 70% de opacidade */
     color: var(--BrancoSuave);
 }
 
-.sobre-secao {
+.profile-container {
+    background-color: var(--Fundo);
+    color: var(--Marrom);
+}
+
+.brand-section,
+.profile-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    /*ajustar talvez colocar um gap aqui e fazer media query, não estou satisfeito como tá o layout ainda*/
 }
 
-.sobre-texto {
+.brand-logo,
+.profile-image {
+    max-width: 70%;
+    /*ajustar caso queira maior*/
+}
+
+.profile-section img {
+    border-radius: 50%;
+}
+
+.brand-text,
+.profile-text {
     max-width: 60%;
+    padding: 0 1rem; /*ajustar aqui sobre a responsividade*/
 }
 
-.logo {
-    max-width: 150px;
+.brand-text h1 {
+    font-weight: bold;
 }
 
-/*FIM DA SEÇÃO*/
-
-/* Responsividade */
-/* @media (max-width: 1100px) {
-    .sobre-secao {
-        padding: 2rem 0;
-    }
-} */
-
-@media (max-width: 768px) {
-    .sobre-secao {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .sobre-texto {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .logo {
-        max-width: 120px;
-    }
+.profile-text h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
 }
 
-@media (max-width: 576px) {
-    .logo {
-        max-width: 100px;
-    }
+/*SEÇÃO DE PRODUÇÃO FI*/
+
+.production-container {
+    background-image: url('../elements/imgs/fundo-artesao-trabalhando.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; Ocupa toda a altura da janela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /*talvez não precise*/
+    padding: 5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.production-content {
+    background-color: var(--Laranja);
+    color: var(--BrancoSuave);
+    padding: 2rem 3rem;
+    max-width: 600px; /* ajustar caso queira bloco maior */
+    text-align: center;
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.production-content h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/*SEÇÃO ESCRITA SOBRE O CHICO*/
+
+.about-container {
+    color: var(--Marrom);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.about-section {
+    border-top: 4px solid var(--Marrom);
+    border-bottom: 4px solid var(--Marrom);
+    padding: 2rem 0;
+}
+
+.about-container h2 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.about-container p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 
 /*MEDIA QUERYS*/
 
+@media (max-width: 768px) {
+
+    .brand-section,
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .brand-text,
+    .profile-text {
+        max-width: 90%;
+        /*ajustar aqui caso queira maior*/
+        margin-top: 1rem;
+    }
+}
+
+/*MEDIA QUERY MARGEM*/
+
 @media (min-width: 901px) {
 
-    .brand-container {
+    .brand-container,
+    .profile-container,
+    .about-container,
+    .production-container {
         padding-left: clamp(4px, 10vw, 464px);
         padding-right: clamp(4px, 10vw, 384px);
     }
