@@ -204,6 +204,7 @@
     opacity: 0;
     transition-duration: 1s;
     transition-delay: 0.7s;
+    margin-bottom: 2rem;
 }
 
 .swiper-slide .content h1 {
@@ -213,6 +214,7 @@
     opacity: 0;
     transition-duration: 1s;
     transition-delay: 0.5s;
+    margin-bottom: 2rem;
 }
 
 .swiper-slide .content p {
@@ -220,6 +222,7 @@
     opacity: 0;
     transition-duration: 1s;
     transition-delay: 0.7s;
+    margin-bottom: 2rem;
 }
 
 .image-container img {
@@ -259,70 +262,9 @@
     color: var(--Laranja);
 }
 
-/*se liga no meu botao ( ͡° ͜ʖ ͡°)*/
-
-.custom-button {
-    position: relative;
-    padding: 10px 20px;
-    background-color: var(--Fundo);
-    color: var(--Laranja);
-    border: 3px solid var(--Laranja);
-    border-radius: 0.7rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px; /*ajustar conforme o tamanho final primeiro use "auto"*/
-    transition: background-color 0.3s, color 0.3s;
-    overflow: hidden;
-}
-
-.custom-button .button-text {
-    transition: transform 0.3s;
-}
-
-.custom-button .button-icon {
-    display: none;
-    margin-left: 10px;
-}
-
-.custom-button .arrow-icon,
-.custom-button .catalog-icon {
-    width: 12px;
-    height: 12px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.custom-button .arrow-icon {
-    background-image: url('../elements/icons/icon-seta.svg');
-}
-
-.custom-button .catalog-icon {
-    background-image: url('../elements/icons/icon-catalogo.svg');
-    width: 16px;
-    height: 16px;
-}
-
-.custom-button:hover {
-    background-color: var(--Laranja);
-    color: var(--BrancoSuave);
-}
-
-.custom-button:hover .button-text {
-    transform: translateX(-10px);
-}
-
-.custom-button:hover .button-icon {
-    display: block;
-}
-
-.custom-button:hover .arrow-icon,
-.custom-button:hover .catalog-icon {
-    transform: translateX(0);
+.custom-button{
+    width: 15rem;
+    font-size: 1.125rem;
 }
 
 /*botao especial cabo*/

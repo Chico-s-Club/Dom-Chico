@@ -41,32 +41,94 @@
     gap: 2rem;
 }
 
+.mobile-search-result{
+    font-size: 1.25rem;
+    text-align: start;
+    width: 100%;
+}
+
 .filter{
     background-color: var(--Vinho);
     border-radius: 10px;
     padding: 1rem min(1.2rem, 10%) 2rem 1rem;
     color: var(--Branco);
-    flex: 1;
-    
+    flex: 1;   
 }
 
-.filter fieldset{
+.filter fieldset, .mobile-filter fieldset{
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
 }
 
-.filter fieldset:not(:last-child){
+.filter fieldset:not(:last-child),
+.mobile-filter fieldset:not(:last-child){
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
     border-bottom: 1px solid var(--Branco);
 }
 
-.filter fieldset input[type="radio"] {
-    border-radius: 0;
+.filter label, .mobile-filter label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  
+
+.filter input[type="checkbox"],
+.mobile-filter input[type="checkbox"]{
+    border: 1px solid var(--Branco);
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 1rem;
+    font-size: 1.125rem;
+    appearance: none;
+}
+
+.filter input[type="checkbox"]:checked,
+.mobile-filter input[type="checkbox"]:checked{
+    background: url(../elements/icons/icon-correto.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--Oliva);
+}
+
+.mobile-filter button{
+    background-color: var(--Vinho);
+    color: var(--Branco);
+    font-size: 1.25rem;
+    border: none;
+    height: 3rem;
+    text-align: start;
+}
+
+.mobile-filter .dropdown-menu{
+    width: 12.5rem;;
+}
+
+.mobile-filter button:hover,
+.mobile-filter button:active,
+.mobile-filter button:focus,
+.mobile-filter button.show{
+    background-color: var(--Vinho);
+    color: var(--Branco);
+}
+
+.mobile-filter .dropdown-toggle:hover,
+.mobile-filter .dropdown-toggle:focus,
+.mobile-filter .dropdown-toggle:active {
+    background-color: var(--Vinho) !important;
+    box-shadow: none !important;
+    color: var(--Branco) !important;
+}
+
+.mobile-filter .dropdown-menu{
+    background-color: var(--Vinho);
+    color: var(--Branco);
+    padding: 1rem;
+}
+
 .catalogue{
     display: flex;
     justify-content: center;
@@ -86,6 +148,95 @@
 .search-result h1{
     font-size: 2rem;
     color: var(--Preto);
+}
+
+.sort-btn, .mobile-sort-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-btn p, .mobile-sort-btn p{
+    text-align: center;
+    margin: 0 1rem 0 0;
+}
+
+.sort-btn button, .mobile-sort-btn button{
+    background-color: var(--Oliva);
+    color: var(--Branco);
+    font-size: 1.25rem;
+    border: none;
+    height: 3rem;
+    width: 10.5rem;
+    text-align: start;
+}
+
+.mobile-sort-btn button, .mobile-sort-btn .dropdown-menu{
+    width: 12.5rem;
+}
+
+.sort-btn button:hover, 
+.sort-btn button:active,
+.sort-btn button:focus,
+.sort-btn button.show
+.mobile-sort-btn button:hover,
+.mobile-sort-btn button:active,
+.mobile-sort-btn button:focus,
+.mobile-sort-btn button.show{
+    background-color: var(--Oliva) !important;
+    color: var(--Branco) !important;
+}
+
+.mobile-sort-btn .dropdown-toggle:hover,
+.mobile-sort-btn .dropdown-toggle:focus,
+.mobile-sort-btn .dropdown-toggle:active {
+    background-color: var(--Oliva) !important;
+    box-shadow: none !important;
+    color: var(--Branco) !important;
+}
+
+.dropdown-toggle:active {
+    background-color: inherit; /* Ou a cor desejada */
+    box-shadow: none; /* Remove bordas ou sombras indesejadas */
+}
+
+.dropdown-toggle:focus {
+    outline: none; /* Remove o contorno azul padrão */
+    background-color: inherit; /* Ajuste a cor de fundo se necessário */
+}
+
+
+.dropdown-menu{
+    background-color: var(--Azul);
+    padding: 0;
+    margin-top: 1rem;
+    border-radius: 10px !important;
+    width: 10.5rem;
+}
+
+.dropdown-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.25rem;
+    background-color: var(--Azul);
+    color: var(--Branco);
+    height: 3rem;
+}
+
+.dropdown-item:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dropdown-item:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-item:hover{
+    background-color: var(--Azul);
+    color: var(--Laranja);
 }
 
 .cards{
@@ -182,18 +333,43 @@
         background-color: var(--Laranja);
         color: var(--Branco);
     }
+
+    .search-result, .sort-btn{
+        display: none;
+    }
 }
 
 @media (max-width: 24rem) {
-    .row > [class*="col-"] {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .mobile-filter button, .mobile-sort-btn button{
+        width: auto;
+        height: auto;
+    }
+
+    .mobile-filter button span, .mobile-sort-btn span{
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .row-col-xs-1 > *{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
 }
 
 /* TELAS GRANDES */
 
-@media (min-width: 1200px) {
+
+@media (min-width: 901px) {
+    .main-container{
+        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+
+    .mobile-search-result, .mobile-filter, .mobile-sort-btn{
+        display: none;
+    }
+
     .catalogue-card:hover{
         background-color: var(--Laranja);
         color: var(--Branco);
@@ -206,8 +382,8 @@
                 drop-shadow(0 -3px 0 white);/* Superior */
     }
     
-    .catalogue-card:hover .card-info{
-        border-color: var(--Branco);
+    .catalogue-card:hover .card-info:before{
+        background-color: var(--Branco);
     }
     
     .catalogue-card:hover .card-btn{
@@ -221,11 +397,11 @@
         color: var(--Laranja);
         border-color: var(--Branco);
     }
-}
 
-@media (min-width: 901px) {
-    .main-container{
-        padding-left: clamp(4px, 10vw, 464px); /* 384px + 5rem da navbar */
-        padding-right: clamp(4px, 10vw, 384px);
+    .catalogue-card:hover .card-btn:active,
+    .catalogue-card:hover .card-btn:focus{
+        background-color: var(--Laranja) !important;
+        color: var(--Branco) !important;
+        border-color: var(--Laranja) !important;
     }
 }
