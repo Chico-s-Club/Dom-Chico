@@ -69,13 +69,16 @@ body {
 
 .production-container {
     background-image: url('../elements/imgs/fundo-artesao-trabalhando.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     /* height: 100vh; Ocupa toda a altura da janela */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /*talvez não precise*/
     padding: 5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .production-content {
@@ -86,6 +89,8 @@ body {
     text-align: center;
     border-radius: 0.5rem; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
 }
 
 .production-content h2 {
