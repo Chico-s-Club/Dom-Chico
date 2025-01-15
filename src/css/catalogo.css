@@ -239,25 +239,29 @@
     color: var(--Laranja);
 }
 
-.cards{
+.catalogue-products{
     justify-content: space-between;
     padding: 0;
-    
 }
 
-.catalogue-card{
+.product-card{
+    border: 1px solid var(--Laranja);
     background-color: var(--Fundo);
     color: var(--Laranja);
-    border: 1px solid var(--Laranja);
     border-radius: 0;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.product{
     transition: all 0.3s ease;
 }
 
-.catalogue-card:last-child{
+.product:last-child{
     margin-right: auto;
 }
 
-.card-info{
+.product-info{
     position: relative;
     display: flex;
     justify-content: center;
@@ -265,7 +269,7 @@
     flex-direction: column;
 }
 
-.card-info::before{
+.product-info::before{
     content: ''; /* Necessário para pseudo-elementos */
     position: absolute;
     top: 0; /* Posiciona no topo */
@@ -275,27 +279,32 @@
     background-color: var(--Laranja); /* Cor da borda */
 }
 
-.card-title{
+.product-name{
     font-size: 1.125rem;
     font-weight: 500;
     text-align: center;
     flex-grow: 1;
+    padding: 0.5rem;
+    min-height: 3rem;
+    margin-bottom: auto !important;
 }
 
-.card-price{
-    font-size: 1.25rem;
+.product-price{
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     flex-grow: 1;
-    margin: 0;
+    margin-bottom: 0.5rem !important;
 }
 
-.card-btn{
-    background: var(--Fundo);
-    color: var(--Laranja);
-    border: 3px solid var(--Laranja);
+.product-cart-btn{
+    background: var(--Laranja);
+    color: var(--Branco);
+    border: 3px solid var(--Fundo);
     border-radius: 0;
     font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .custom-button{
@@ -314,8 +323,18 @@
 
 /* TELAS PEQUENAS */
 
+@media (max-width: 1300px) {
+    .filter{
+        flex: 1.5;
+    }
+
+    .product-cart-btn{
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 1200px) {
-    .card-title, .card-btn{
+    .product-name{
         font-size: 1rem;
     }
 }
@@ -370,38 +389,39 @@
         display: none;
     }
 
-    .catalogue-card:hover{
+    .product-card:hover{
         background-color: var(--Laranja);
         color: var(--Branco);
+        cursor: pointer;
     }
     
-    .catalogue-card:hover .card-img{
+    .product-card:hover .card-img{
         filter: drop-shadow(3px 0 0 white)  /* Direita */
                 drop-shadow(-3px 0 0 white) /* Esquerda */
                 drop-shadow(0 3px 0 white)  /* Inferior */
                 drop-shadow(0 -3px 0 white);/* Superior */
     }
     
-    .catalogue-card:hover .card-info:before{
+    .product:hover .product-info:before{
         background-color: var(--Branco);
     }
     
-    .catalogue-card:hover .card-btn{
+    .product:hover .product-cart-btn{
         background-color: var(--Laranja);
         color: var(--Branco);
         border-color: var(--Branco);
     }
     
-    .catalogue-card:hover .card-btn:hover{
+    .product:hover .product-cart-btn:hover{
         background-color: var(--Branco);
         color: var(--Laranja);
         border-color: var(--Branco);
     }
 
-    .catalogue-card:hover .card-btn:active,
-    .catalogue-card:hover .card-btn:focus{
-        background-color: var(--Laranja) !important;
-        color: var(--Branco) !important;
-        border-color: var(--Laranja) !important;
+    .product:hover .product-cart-btn:active,
+    .product:hover .product-cart-btn:focus{
+        background-color: var(--Branco) !important;
+        color: var(--Laranja) !important;
+        border-color: var(--Branco) !important;
     }
 }

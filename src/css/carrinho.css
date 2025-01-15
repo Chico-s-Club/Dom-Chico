@@ -1,0 +1,120 @@
+/*
+    14px = 0.875rem
+    18px = 1.125rem
+    20px = 1,25rem
+    24px = 1.5rem
+    28px = 1.75rem
+    36px = 2.25rem
+    40px = 2.5rem
+    58px = 3.625rem
+    64px = 4rem
+    192px = 12rem
+    224px = 14rem
+    272px = 17rem
+    384px = 24rem
+    464px = 29rem
+*/
+
+:root {
+    --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+}
+
+/* CARRINHO */
+
+.cart-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1.5rem 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.item-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.item-img img{
+    width: 150px;
+    height: 150px;
+}
+
+.product-name{
+    font-size: 1.25rem;
+}
+
+.counter-container{
+    background-color: var(--Laranja);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    max-width: 12rem;
+}
+
+.item-counter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--Branco);
+}
+
+.item-counter-display{
+    background-color: var(--Laranja);
+    color: var(--Branco);
+    text-align: center;
+    width: 33%;
+    border: none;
+}
+
+.item-counter-display:focus{
+    outline: none;
+}
+
+.item-counter-down:hover,
+.item-counter-up:hover{
+    cursor: pointer;
+}
+
+.product-price{
+    font-size: 1.75rem;
+    font-weight: bold;
+    width: 20%;
+    text-align: center;
+}
+
+/* TELAS GRANDES */
+
+@media (min-width: 901px) {
+    .cart-container{
+        padding-left: clamp(4px, 10vw, 464px);
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+}

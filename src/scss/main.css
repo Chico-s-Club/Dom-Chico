@@ -4337,8 +4337,8 @@ textarea.form-control-lg {
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
-  --bs-card-title-spacer-y: 0.5rem;
-  --bs-card-title-color: ;
+  --bs-product-name-spacer-y: 0.5rem;
+  --bs-product-name-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
   --bs-card-border-color: var(--bs-border-color-translucent);
@@ -4395,13 +4395,13 @@ textarea.form-control-lg {
   color: var(--bs-card-color);
 }
 
-.card-title {
-  margin-bottom: var(--bs-card-title-spacer-y);
-  color: var(--bs-card-title-color);
+.product-name {
+  margin-bottom: var(--bs-product-name-spacer-y);
+  color: var(--bs-product-name-color);
 }
 
 .card-subtitle {
-  margin-top: calc(-0.5 * var(--bs-card-title-spacer-y));
+  margin-top: calc(-0.5 * var(--bs-product-name-spacer-y));
   margin-bottom: 0;
   color: var(--bs-card-subtitle-color);
 }
@@ -5247,7 +5247,7 @@ textarea.form-control-lg {
   --bs-list-group-active-border-color: var(--bs-success-text-emphasis);
 }
 
-.list-group-item-info {
+.list-group-product-info {
   --bs-list-group-color: var(--bs-info-text-emphasis);
   --bs-list-group-bg: var(--bs-info-bg-subtle);
   --bs-list-group-border-color: var(--bs-info-border-subtle);

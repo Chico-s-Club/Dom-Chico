@@ -1,7 +1,21 @@
+let body = document.querySelector('body');
+let closeCart = document.querySelector('.close');
+let iconCart = document.querySelector('.icon-cart');
+let iconCartSpan = document.querySelector('icon-cart span')
+const navbar = document.querySelector('#navbar');
+const toggleItem = document.querySelector('#toggle-nav');
+const iconArrow = document.querySelector('#icon-arrow');
+const currentStyle = navbar.style.left;
+
+iconCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+});
+
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+});
+
 function toggleNavbar() {
-    const navbar = document.getElementById('navbar');
-    const toggleItem = document.getElementById('toggle-nav');
-    const iconArrow = document.getElementById('icon-arrow');
     const currentStyle = navbar.style.left;
 
     // Faz a navbar desaparecer
@@ -21,9 +35,9 @@ function toggleNavbar() {
 }
 
 function adjustNavBarPosition() {
-    const navbar = document.getElementById('navbar');
-    const toggleItem = document.getElementById('toggle-nav');
-    const iconArrow = document.getElementById('icon-arrow');
+    const navbar = document.querySelector('#navbar');
+    const toggleItem = document.querySelector('#toggle-nav');
+    const iconArrow = document.querySelector('#icon-arrow');
     const mediaQuery = window.matchMedia('(min-width: 901px)');
     
     if (mediaQuery.matches) {

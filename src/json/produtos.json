@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Bacia de madeira top do google 1",
+        "price": 100,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 1
+    },
+    {
+        "id": 2,
+        "name": "Bacia de madeira top do google 2",
+        "price": 200,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 2
+    },
+    {
+        "id": 3,
+        "name": "Bacia de madeira top do google 3",
+        "price": 300,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 3
+    },
+    {
+        "id": 4,
+        "name": "Bacia de madeira top do google 4",
+        "price": 400,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 4
+    },
+    {
+        "id": 5,
+        "name": "Bacia de madeira top do google 5",
+        "price": 500,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 5
+    },
+    {
+        "id": 6,
+        "name": "Bacia de madeira top do google 6",
+        "price": 600,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 6
+    },
+    {
+        "id": 7,
+        "name": "Bacia de madeira top do google 7",
+        "price": 700,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 7
+    },
+    {
+        "id": 8,
+        "name": "Bacia de madeira top do google 8",
+        "price": 800,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 8
+    },
+    {
+        "id": 9,
+        "name": "Bacia de madeira top do google 9",
+        "price": 900,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 9
+    },
+    {
+        "id": 10,
+        "name": "Bacia de madeira top do google 10",
+        "price": 1000,
+        "image": "../src/elements/catalogue/bacia-de-madeira-avaliacoes.png",
+        "stock": 10
+    }
+]
