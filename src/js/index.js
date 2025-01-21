@@ -171,3 +171,4 @@ const swiperProducts = new Swiper('.products-swiper', {
   loop: true,
   grabCursor: true,
 });
+

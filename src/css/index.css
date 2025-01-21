@@ -30,6 +30,10 @@
     --Marrom: #511B06;
 }
 
+.catalogue-products{
+    display: none;
+}
+
 /* SELOS DE APROVAÇÃO */
 
 .approval-container {
@@ -160,6 +164,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--Fundo);
+    margin-bottom: 5rem;
 }
 
 .products {
@@ -277,6 +282,138 @@
     font-size: 1.5em;
 }
 
+/* INFORMAÇÕES SOBRE AS MADEIRAS */
+
+.wood-info-wrapper{
+    background-color: var(--Vinho);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 12rem;
+}
+
+.slider-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.slider-container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.slider-card {
+    width: 80px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.slider-card > .slider-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.slider-card > .slider-content > .slider-icon {
+    background: var(--Fundo);
+    color: var(--Laranja);
+    border-radius: 50%;
+    width: 50px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.slider-card > .slider-content > .slider-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .5s ease;
+}
+
+.slider-description p {
+    color: var(--Branco);
+    padding-top: 5px;
+    text-shadow: 1px 1px #000;
+}
+
+.slider-description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 800px;
+}
+
+input:checked + label .slider-description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.slider-card[for="slide1"] {
+    background-image: url('../elements/imgs/img-insta-1.jpg');
+    background-position: center center;
+}
+.slider-card[for="slide2"] {
+    background-image: url('../elements/imgs/img-insta-2.jpg');
+    background-position: center center;
+}
+.slider-card[for="slide3"] {
+    background-image: url('../elements/imgs/img-insta-3.jpg');
+    background-position: center center;
+}
+.slider-card[for="slide4"] {
+    background-image: url('../elements/imgs/img-insta-1.jpg');
+    background-position: center center;
+}
+
+/* MAIS VENDIDOS */
+
+.most-sold-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 12rem;
+}
+
+.most-sold-container{
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.product-name{
+    font-size: 1.25rem !important;
+    color: var(--Laranja) !important;
+    font-weight: 100 !important;
+    transition: all 0.3s ease;
+}
 
 /*ESILIZAÇÃO CLIENTES*/
 
@@ -422,16 +559,27 @@
     #products-container .swiper-slide {
         padding: 0;
     }
+    input:checked + label {
+        width: 600px;
+    }
+    .slider-card > .slider-content > .slider-description{
+        width: 600px;
+    }
 }
 
 @media (max-width: 1100px) {
     .products {
         width: 100%;
     }
-
     .image-container {
         width: 70%; /*ajustar conforme achar melhor o tamanho da imagem*/
         height: auto;
+    }
+    input:checked + label {
+        width: 400px;
+    }
+    .slider-card > .slider-content > .slider-description{
+        width: 400px;
     }
 }
 
@@ -439,27 +587,22 @@
     .approval-block {
         flex-direction: column;
     }
-
     .approval-item {
         flex-direction: column;
         justify-content: space-between;
         border-right: none;
         height: 100%;
     }
-
     .approval-info h3 {
         font-size: 0.875rem;
     }
-
     .approval-info {
         font-size: 0.875rem;
     }
-
     .approval-info,
     .approval-info h3 {
         text-align: center;
     }
-
     .testimonials-container,
     .teste,
     .approval-container,
@@ -474,16 +617,40 @@
         flex-direction: column;
         align-items: center;
     }
-
     .image-container {
         width: 60%; /*ajustar conforme achar melhor o tamanho da imagem*/
         height: auto;
+    }
+    .slider-container{
+        height: 600px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .slider-card{
+        height: 100px;
+        width: 90%;
+        margin: 10px 0;
+    }
+    input:checked + label {
+        height: 400px;
+        width: 90%;
+    }
+    .slider-card > .slider-content{
+        width: 100%;
+    }
+    .slider-card > .slider-content > .slider-icon{
+        margin: 10px;
+        width: 40px;
     }
 }
 
 @media (max-width: 600px) {
     .approval-icon svg {
         margin-bottom: auto;
+    }
+    input:checked + label {
+        height: 300px;
     }
 }
 
@@ -492,18 +659,35 @@
         width: 30px;
         height: 30px;
     }
+    .slider-card > .slider-content > .slider-icon{
+        display: none;
+    }
+    .slider-card > .slider-content > .slider-description {
+        margin: 15px;
+        height: 60px;
+    }
 }
 
 /* TELAS GRANDES */
 
 @media (min-width: 901px) {
-
     .testimonials-container,
     .teste,
     .approval-container,
     .propaganda-container,
-    .products-container {
+    .products-container,
+    .wood-info-wrapper,
+    .most-sold-container {
         padding-left: clamp(4px, 10vw, 464px);
-        padding-right: clamp(4px, 10vw, 384px);
+        padding-right: clamp(4px, 10vw, 352px);
+    }
+
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 22% !important;
+    }
+
+    .product-card:hover .product-name{
+        color: var(--Branco) !important;
     }
 }

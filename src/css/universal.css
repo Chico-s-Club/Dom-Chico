@@ -61,6 +61,7 @@ svg {
     font-size: 2.25rem;
     text-align: center;
     margin-bottom: 4rem;
+    margin-top: 1rem;
 }
 
 .title-color {
@@ -108,7 +109,7 @@ svg {
     height: 12px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }
 
 .custom-button .arrow-icon {
@@ -117,8 +118,8 @@ svg {
 
 .custom-button .catalog-icon {
     background-image: url('../elements/icons/icon-catalogo.svg');
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 /* ---------------------------------------- */
@@ -295,19 +296,20 @@ svg {
 
 .cartTab{
     position: absolute;
-    width: 400px;
+    width: 450px;
     /* background-color: #353432; */
     background-color: var(--Fundo);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 25%);
     color: var(--Preto);
     position: fixed;
     top: 0;
-    right: -400px;
+    right: -450px;
     bottom: 0;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: .5s;
     z-index: 999;
+    height: 100svh;
 }
 body.showCart .cartTab{
     right: 0;
@@ -341,7 +343,7 @@ body.showCart .cartTab{
     background-color: var(--Laranja) !important;
     color: var(--Branco) !important;
 }
-.minus, .plus{
+.quantity{
     user-select: none; /* Para navegadores modernos */
     -webkit-user-select: none; /* Safari/Chrome */
     -ms-user-select: none; /* Internet Explorer/Edge */
@@ -356,6 +358,7 @@ body.showCart .cartTab{
     border: none;
     font-weight: 500;
     cursor: pointer;
+    height: 56px;
 }
 .cartTab .close{
     background-color: var(--VermelhoVibrante);
@@ -366,7 +369,7 @@ body.showCart .cartTab{
 }
 .listCart .item{
     display: grid;
-    grid-template-columns: 70px 150px 60px 1fr;
+    grid-template-columns: 70px 150px 70px 1fr;
     gap: 10px;
     text-align: center;
     align-items: center;
@@ -396,6 +399,19 @@ body.showCart .cartTab{
 }
 .listCart::-webkit-scrollbar{
     width: 0;
+}
+.finalPrice{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: auto;
+    padding: 8px;
+}
+.finalPrice span{
+    font-weight: 500;
 }
 
 /*FOOTER*/
@@ -625,11 +641,19 @@ body.showCart .cartTab{
         width: 100%;
         right: -100%;
     }
+    .listCart .item{
+        grid-template-columns: 50px 130px 90px 1fr;
+        gap: 5px;
+        padding: 0.5rem;
+    }
 }
 
 @media (max-width: 335px) {
     .utility-icons {
         gap: 4px;
+    }
+    .cartTab{
+        font-size: 0.875rem;
     }
 }
 
@@ -690,5 +714,9 @@ body.showCart .cartTab{
     .custom-button:hover .arrow-icon,
     .custom-button:hover .catalog-icon {
         transform: translateX(0);
+    }
+
+    .custom-button, .arrow-icon{
+        margin-left: 0 !important;
     }
 }
