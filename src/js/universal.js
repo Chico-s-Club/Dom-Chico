@@ -226,7 +226,7 @@ const changeQuantity = (product_id, type) => {
 
 // Inicializa os produtos e o carrinho
 const initProducts = () => {
-  fetch("../src/json/produtos.json")
+  fetch("./src/json/produtos.json")
     .then((Response) => Response.json())
     .then((data) => {
       productList = data;
