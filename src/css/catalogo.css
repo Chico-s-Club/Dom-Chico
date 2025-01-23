@@ -60,6 +60,9 @@
     justify-content: center;
     align-items: start;
     flex-direction: column;
+    user-select: none; /* Para navegadores modernos */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .filter fieldset:not(:last-child),
@@ -73,6 +76,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .filter input[type="checkbox"],

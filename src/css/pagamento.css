@@ -1,7 +1,7 @@
 /*
     14px = 0.875rem
     18px = 1.125rem
-    20px = 1,25rem
+    20px = 1.25rem
     24px = 1.5rem
     28px = 1.75rem
     36px = 2.25rem
@@ -30,90 +30,103 @@
     --Marrom: #511B06;
 }
 
-/* CARRINHO */
+/* RESUMO DO PEDIDO */
 
-.cart-container{
+.checkout-container{
+    background-color: var(--AzulClaro);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.order-container{
+    background-color: var(--Oliva);
+    display: grid;
+    grid-template-rows: 1fr 150px;
+    transition: .5s;
+    width: 600px;
+}
+
+.order-list .order-item{
+    display: grid;
+    grid-template-columns: 130px 1fr 100px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.order-list .order-item img{
+    width: 100%;
+}
+
+.order-list .order-item .image{
+    position: relative;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.checkoutQuantity{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--Laranja);
+    color: var(--Branco);
+    width: 30px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.order-item .name{
+    font-size: 1.125rem;
+}
+
+.order-item .totalQuantityPrice{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.adress-shipping-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.adress-container{
+    background-color: var(--Laranja);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.shipping-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shipping fieldset{
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    margin-top: 4rem;
-}
-
-.cart-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    max-width: 100%;
-    padding: 1rem 1.5rem 1rem 0;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.item-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    width: 150px;
-    height: 150px;
-}
-
-.item-img img{
-    width: 150px;
-    height: 150px;
-}
-
-.product-name{
+.shipping fieldset label{
     font-size: 1.25rem;
-}
-
-.counter-container{
-    background-color: var(--Laranja);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    flex-grow: 1;
-    max-width: 12rem;
-}
-
-.item-counter{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2rem;
-    color: var(--Branco);
-}
-
-.item-counter-display{
-    background-color: var(--Laranja);
-    color: var(--Branco);
-    text-align: center;
-    width: 33%;
-    border: none;
-}
-
-.item-counter-display:focus{
-    outline: none;
-}
-
-.item-counter-down:hover,
-.item-counter-up:hover{
-    cursor: pointer;
-}
-
-.product-price{
-    font-size: 1.75rem;
-    font-weight: bold;
-    width: 20%;
-    text-align: center;
+    padding: 1rem;
 }
 
 /* TELAS GRANDES */
 
 @media (min-width: 901px) {
-    .cart-container{
+    .checkout-container{
         padding-left: clamp(4px, 10vw, 464px);
         padding-right: clamp(4px, 10vw, 384px);
     }

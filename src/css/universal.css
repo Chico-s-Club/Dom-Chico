@@ -344,6 +344,9 @@ body.showCart .cartTab{
     color: var(--Branco) !important;
 }
 .quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     user-select: none; /* Para navegadores modernos */
     -webkit-user-select: none; /* Safari/Chrome */
     -ms-user-select: none; /* Internet Explorer/Edge */
@@ -642,18 +645,24 @@ body.showCart .cartTab{
         right: -100%;
     }
     .listCart .item{
-        grid-template-columns: 50px 130px 90px 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 5px;
         padding: 0.5rem;
     }
 }
 
-@media (max-width: 335px) {
+@media (max-width: 380px) {
     .utility-icons {
         gap: 4px;
     }
     .cartTab{
         font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .quantity{
+        flex-direction: column;
     }
 }
 

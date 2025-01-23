@@ -1,6 +1,7 @@
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
 let iconCart = document.querySelector('.icon-cart');
+let checkOut = document.querySelector('.checkOut')
 const navbar = document.querySelector('#navbar');
 const toggleItem = document.querySelector('#toggle-nav');
 const iconArrow = document.querySelector('#icon-arrow');
@@ -19,6 +20,10 @@ iconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
+
+checkOut.addEventListener('click', () => {
+  window.location.href = 'pagamento.html';
+})
 
 // Função para alternar a visibilidade da navegação
 function toggleNavbar() {
