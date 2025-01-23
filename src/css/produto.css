@@ -1,0 +1,257 @@
+:root {
+    --Branco: #fff;
+    --BrancoSuave: #f7f7f7;
+    --Preto: #000;
+    --Fundo: #F3E9DC;
+    --Creme: #E3CAB1;
+    --Laranja: #DC720E;
+    --Vinho: #7B2D26;
+    --Oliva: #6A994E;
+    --Azul: #264653;
+    --AzulClaro: #3A78BF;
+    --VermelhoVibrante: #D72638;
+    --Marrom: #511B06;
+}
+
+.product-container {
+    margin-top: 4rem;
+    /* background-color: green; */
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+    width: 100%;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnail-images img {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    width: 70px;
+    height: auto;
+}
+
+.thumbnail-images img.active {
+    border-radius: 0.5rem;
+    border-color: var(--Laranja);
+    transition: border-color 0.3s ease;
+}
+
+.main-image {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: fill;
+    aspect-ratio: 1/1;
+    /* Mantém a imagem quadrada */
+}
+
+.product-info {
+    flex: 1;
+    max-width: 500px;
+    border-left: 3px solid rgba(0, 0, 0, 0.2);
+    border-right: 3px solid rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.stock-info {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--Oliva);
+}
+
+.payment-options {
+    font-size: 1rem;
+}
+
+.quantity-selector {
+    margin: 1rem 0;
+}
+
+.quantity-selector label {
+    font-size: 1rem;
+}
+
+.quantity-selector input {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.quantity-selector input:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.action-buttons button {
+    /*só testo por enquanto tem que terminar*/
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-buy {
+    background-color: var(--Oliva);
+    color: var(--BrancoSuave);
+}
+
+.btn-cart {
+    background-color: var(--AzulClaro);
+    color: var(--BrancoSuave);
+}
+
+.shipping-calculator {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.cep-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.cep-wrapper input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.cep-wrapper .btn-calculate {
+    padding: 0.5rem;
+    border: none;
+    background-color: #17a2b8;
+    color: var(--BrancoSuave);
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.shipping-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--Branco);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    width: 100%;
+    z-index: 10;
+}
+
+.shipping-options p {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.shipping-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shipping-options ul li {
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.shipping-options ul li:last-child {
+    border-bottom: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/*
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail-images {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .thumbnail-images img {
+        width: 70px;
+    }
+
+    .main-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-images {
+        flex-wrap: wrap;
+    }
+
+    .thumbnail-images img {
+        width: 50px;
+    }
+}*/
+
+
+
+/*margem ajustada*/
+
+@media (min-width: 901px) {
+
+    .product-container {
+        padding-left: clamp(4px, 10vw, 464px);
+        padding-right: clamp(4px, 10vw, 384px);
+    }
+}
